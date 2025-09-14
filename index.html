@@ -114,7 +114,7 @@
     </symbol>
   </svg>
 
-  <!-- HEADER -->
+    <!-- HEADER -->
   <header class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
     <div class="container-max px-4 py-3 flex items-center justify-between">
       <a href="/" class="flex items-center gap-3">
@@ -122,6 +122,7 @@
         <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
       </a>
 
+      <!-- Navegação desktop -->
       <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
         <a href="/" class="text-red-600">HOME</a>
 
@@ -144,11 +145,70 @@
         <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
       </nav>
 
-      <a href="https://wa.me/5521959532161?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20extintores" target="_blank" class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+      <!-- CTA desktop -->
+      <a href="https://wa.me/5521959532161?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20extintores"
+        target="_blank"
+        class="hidden sm:inline-flex md:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
         Orçamento no WhatsApp
       </a>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button id="nav-toggle"
+              class="md:hidden inline-flex items-center justify-center rounded-lg p-2 ml-2 border border-gray-200 text-gray-700 hover:bg-gray-100"
+              aria-label="Abrir menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+        <!-- ícone hambúrguer -->
+        <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <!-- ícone fechar -->
+        <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
     </div>
   </header>
+    <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <!-- Backdrop -->
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+
+    <!-- Drawer -->
+    <nav class="absolute right-0 top-0 h-full w-[86%] max-w-[360px] bg-white shadow-2xl p-5 overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <svg class="h-7 w-7"><use href="#logo-fenix"/></svg>
+          <span class="font-extrabold">FENIX EXTINTORES</span>
+        </div>
+        <button id="nav-close" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Fechar menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <ul class="space-y-1 text-[15px] font-semibold">
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/">Home</a></li>
+        <li class="pt-2 text-xs uppercase text-gray-400 px-3">Serviços</li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/avcb-ppci.html">AVCB & PPCI</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/brigada-de-incendio.html">Brigada de Incêndio</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/sinalizacao-rota-de-fuga.html">Sinalização</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/teste-hidrostatico.html">Teste Hidrostático</a></li>
+        <li class="pt-2"><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/blog/index.html">Blog</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/sobre.html">Empresa</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/contato.html">Contato</a></li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="https://wa.me/5521959532161"
+          target="_blank"
+          class="w-full inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-3 font-semibold hover:bg-emerald-700">
+          WhatsApp
+        </a>
+      </div>
+    </nav>
+  </div>
+
+
 
   <!-- HERO (sem formulário) -->
   <section class="relative">
@@ -649,6 +709,39 @@
         btn.setAttribute('aria-label', `Solicitar informações sobre ${nome} no WhatsApp`);
       });
     })();
+    // === Menu Mobile (drawer) ===
+(function(){
+  const toggle = document.getElementById('nav-toggle');
+  const closeBtn = document.getElementById('nav-close');
+  const menu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('mobile-backdrop');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  if(!toggle || !menu) return;
+
+  const open = () => {
+    menu.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+    toggle.setAttribute('aria-expanded','true');
+    iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+  };
+  const close = () => {
+    menu.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    toggle.setAttribute('aria-expanded','false');
+    iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+  };
+
+  toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
+  closeBtn && closeBtn.addEventListener('click', close);
+  backdrop && backdrop.addEventListener('click', close);
+  // Fecha com ESC
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+  // Fecha ao clicar em um link do drawer
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+})();
+
   </script>
 </body>
 </html>
