@@ -555,45 +555,55 @@
     slider.addEventListener('mouseleave',()=>auto=setInterval(()=>slider.scrollBy({left:400,behavior:'smooth'}),4000));
 
     // Tabs serviços (conteúdo em JS para interação rápida)
-    const cards = {
-      avcb: [
-        {href:'/servico/avcb-ppci.html',img:'/assets/ppci.png',title:'Projeto AVCB & PPCI',desc:'Projeto técnico, ART e regularização no CBMERJ.'},
-        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/rota-fulga.jfif',title:'Sinalização conforme NBR',desc:'Layout, instalação e placas fotoluminescentes.'},
-        {href:'/servico/teste-hidrostatico.html',img:'/assets/laudo2.jpg',title:'Laudos & Ensaios',desc:'Relatórios, etiquetas e rastreabilidade.'},
-      ],
-      brigada: [
-        {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada1.jpg',title:'Treinamento da Brigada',desc:'Formação, simulados e certificação.'},
-        {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada2.jpg',title:'Dimensionamento',desc:'Plano de brigada, mapas e POPs.'},
-        {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada3.jpg',title:'Inspeções Periódicas',desc:'Rondas, checklists e relatórios.'},
-      ],
-      sinalizacao: [
-        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao1.jpg',title:'Placas Fotoluminescentes',desc:'Conforme NBR 13434 e ITs do Corpo de Bombeiros.'},
-        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao2.jpg',title:'Mapas e Rotas de Fuga',desc:'Layout de rotas com altura, setas e fluxos.'},
-        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao3.jpg',title:'Luzes de Emergência',desc:'Instalação e testes de autonomia.'},
-      ],
-      hidro: [
-        {href:'/servico/teste-hidrostatico.html',img:'/assets/teste01.jpg',title:'Teste Hidrostático',desc:'Ensaios em cilindros e mangueiras.'},
-        {href:'/servico/teste-hidrostatico.html',img:'/assets/teste02.jpg',title:'Recarga Certificada',desc:'Selo, lacre e etiqueta com validade.'},
-        {href:'/servico/teste-hidrostatico.html',img:'/assets/teste03.jpg',title:'Manutenção de Extintores',desc:'Inspeção N1, N2 e N3 conforme norma.'},
-      ]
-    };
-    const grid=document
-    .getElementById('tabContent');
-    function renderTab(key){
-      grid.innerHTML = cards[key].map(c=>`
-        <a href="${c.href}" class="card hover:shadow-soft transition overflow-hidden">
-          <img src="${c.img}" alt="${c.title}" class="w-full h-40 object-cover" loading="lazy">
-          <div class="p-5">
-            <h3 class="font-bold text-lg">${c.title}</h3>
-            <p class="mt-1 text-sm text-gray-600">${c.desc}</p>
-          </div>
-        </a>`).join('');
-    }
-    renderTab('avcb');
-    .querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
-      .querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
-      b.classList.add('active'); renderTab(b.dataset.tab);
-    }));
+    // Tabs serviços (conteúdo em JS para interação rápida)
+  const cards = {
+    avcb: [
+      {href:'/servico/avcb-ppci.html',img:'/assets/ppci.png',title:'Projeto AVCB & PPCI',desc:'Projeto técnico, ART e regularização no CBMERJ.'},
+      {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/rota-fulga.jfif',title:'Sinalização conforme NBR',desc:'Layout, instalação e placas fotoluminescentes.'},
+      {href:'/servico/teste-hidrostatico.html',img:'/assets/laudo2.jpg',title:'Laudos & Ensaios',desc:'Relatórios, etiquetas e rastreabilidade.'},
+    ],
+    brigada: [
+      {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada1.jpg',title:'Treinamento da Brigada',desc:'Formação, simulados e certificação.'},
+      {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada2.jpg',title:'Dimensionamento',desc:'Plano de brigada, mapas e POPs.'},
+      {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada3.jpg',title:'Inspeções Periódicas',desc:'Rondas, checklists e relatórios.'},
+    ],
+    sinalizacao: [
+      {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao1.jpg',title:'Placas Fotoluminescentes',desc:'Conforme NBR 13434 e ITs do Corpo de Bombeiros.'},
+      {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao2.jpg',title:'Mapas e Rotas de Fuga',desc:'Layout de rotas com altura, setas e fluxos.'},
+      {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao3.jpg',title:'Luzes de Emergência',desc:'Instalação e testes de autonomia.'},
+    ],
+    hidro: [
+      {href:'/servico/teste-hidrostatico.html',img:'/assets/teste01.jpg',title:'Teste Hidrostático',desc:'Ensaios em cilindros e mangueiras.'},
+      {href:'/servico/teste-hidrostatico.html',img:'/assets/teste02.jpg',title:'Recarga Certificada',desc:'Selo, lacre e etiqueta com validade.'},
+      {href:'/servico/teste-hidrostatico.html',img:'/assets/teste03.jpg',title:'Manutenção de Extintores',desc:'Inspeção N1, N2 e N3 conforme norma.'},
+    ]
+  };
+
+  const grid = document.getElementById('tabContent');
+
+  function renderTab(key){
+    if (!grid) return;
+    grid.innerHTML = (cards[key] || []).map(c => `
+      <a href="${c.href}" class="card hover:shadow-soft transition overflow-hidden">
+        <img src="${c.img}" alt="${c.title}" class="w-full h-40 object-cover" loading="lazy">
+        <div class="p-5">
+          <h3 class="font-bold text-lg">${c.title}</h3>
+          <p class="mt-1 text-sm text-gray-600">${c.desc}</p>
+        </div>
+      </a>`).join('');
+  }
+
+  // carrega a aba padrão
+  renderTab('avcb');
+
+  // troca de abas
+  document.querySelectorAll('.tab-btn').forEach(b => {
+    b.addEventListener('click', () => {
+      document.querySelectorAll('.tab-btn').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      renderTab(b.dataset.tab);
+    });
+  });
   </script>
 </body>
 </html>
