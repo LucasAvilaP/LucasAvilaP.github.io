@@ -24,35 +24,99 @@
 </head>
 
 <body class="bg-slate-50 text-slate-800">
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
-  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="assets/logo.svg" alt="Logo" class="h-9 w-9">
-      <span class="font-extrabold text-slate-900">RDR Extintores</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-1">
-      <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Home</a>
-      
-    <div class="relative group">
-      <button class="px-3 py-2 rounded-md text-sm font-medium bg-primary text-white flex items-center gap-2">
-        <span>Serviços</span>
-        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+<!-- HEADER -->
+  <header class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="container-max px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" aria-label="Logo FENIX EXTINTORES"><use href="#logo-fenix"/></svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="text-red-600">HOME</a>
+
+        <div class="nav-group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-gray-100 flex items-center gap-2" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="nav-bridge"></div>
+          <div class="dropdown">
+            <a href="/servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="hover:text-red-600">BLOG</a>
+        <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <!-- CTA desktop -->
+      <a href="https://wa.me/5521959532161?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20extintores"
+        target="_blank"
+        class="hidden sm:inline-flex md:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button id="nav-toggle"
+              class="md:hidden inline-flex items-center justify-center rounded-lg p-2 ml-2 border border-gray-200 text-gray-700 hover:bg-gray-100"
+              aria-label="Abrir menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false">
+        <!-- ícone hambúrguer -->
+        <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <!-- ícone fechar -->
+        <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
       </button>
-      <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute top-full left-0 mt-2 w-72 bg-red-600 text-white rounded-xl shadow-lg p-2">
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a>
-      </div>
     </div>
-    
-      <a href="/blog/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Blog</a>
-      <a href="sobre.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Empresa</a>
-      <a href="contato.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Contato</a>
+  </header>
+    <!-- MENU MOBILE -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <!-- Backdrop -->
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+
+    <!-- Drawer -->
+    <nav class="absolute right-0 top-0 h-full w-[86%] max-w-[360px] bg-white shadow-2xl p-5 overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <svg class="h-7 w-7"><use href="#logo-fenix"/></svg>
+          <span class="font-extrabold">FENIX EXTINTORES</span>
+        </div>
+        <button id="nav-close" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Fechar menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <ul class="space-y-1 text-[15px] font-semibold">
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/">Home</a></li>
+        <li class="pt-2 text-xs uppercase text-gray-400 px-3">Serviços</li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/avcb-ppci.html">AVCB & PPCI</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/brigada-de-incendio.html">Brigada de Incêndio</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/sinalizacao-rota-de-fuga.html">Sinalização</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/teste-hidrostatico.html">Teste Hidrostático</a></li>
+        <li class="pt-2"><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/blog/index.html">Blog</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/sobre.html">Empresa</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/contato.html">Contato</a></li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="https://wa.me/5521959532161"
+          target="_blank"
+          class="w-full inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-3 font-semibold hover:bg-emerald-700">
+          WhatsApp
+        </a>
+      </div>
     </nav>
-    <a href="https://wa.me/5521999999999?text=Olá!%20Quero%20um%20orçamento%20de%20extintores." class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:opacity-90">WhatsApp</a>
   </div>
-</header>
 
 <main class="container mx-auto px-4 py-14">
   <h1 class="text-3xl font-bold mb-6">Serviços</h1>
@@ -100,6 +164,40 @@
     <path d="M20 3.5A10.5 10.5 0 0 0 3.2 17.8L2 22l4.3-1.1A10.5 10.5 0 1 0 20 3.5Z"/>
   </svg>
 </a>
+<script>
+    // === Menu Mobile (drawer) ===
+(function(){
+  const toggle = document.getElementById('nav-toggle');
+  const closeBtn = document.getElementById('nav-close');
+  const menu = document.getElementById('mobile-menu');
+  const backdrop = document.getElementById('mobile-backdrop');
+  const iconOpen = document.getElementById('icon-open');
+  const iconClose = document.getElementById('icon-close');
+
+  if(!toggle || !menu) return;
+
+  const open = () => {
+    menu.classList.remove('hidden');
+    document.body.classList.add('overflow-hidden');
+    toggle.setAttribute('aria-expanded','true');
+    iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+  };
+  const close = () => {
+    menu.classList.add('hidden');
+    document.body.classList.remove('overflow-hidden');
+    toggle.setAttribute('aria-expanded','false');
+    iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+  };
+
+  toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
+  closeBtn && closeBtn.addEventListener('click', close);
+  backdrop && backdrop.addEventListener('click', close);
+  // Fecha com ESC
+  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+  // Fecha ao clicar em um link do drawer
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+})();
+</script>
 
 </body>
 </html>
