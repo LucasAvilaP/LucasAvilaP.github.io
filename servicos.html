@@ -1,108 +1,281 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Serviços | RDR Extintores - Clone</title>
-  <meta name="description" content="Conheça todos os serviços: AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático.">
-  <meta name="keywords" content="extintores, recarga, manutenção, brigada de incêndio, AVCB, PPCI, RJ, Rio de Janeiro">
-  <meta property="og:title" content="Serviços">
-  <meta property="og:description" content="Conheça todos os serviços: AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático.">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serviços | FENIX EXTINTORES</title>
+  <meta name="description" content="Conheça os serviços da FENIX EXTINTORES: projetos AVCB/PPCI, brigada de incêndio, sinalização de rota de fuga e teste hidrostático no RJ." />
+  <meta name="keywords" content="extintores, recarga, manutenção, brigada de incêndio, AVCB, PPCI, RJ, Rio de Janeiro, teste hidrostático, sinalização">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: { primary: '#ea1d1d', dark: '#0f172a' }
-        }
-      }
-    }
-  </script>
-  <style>.container{max-width:1200px}</style>
-</head>
+  <meta property="og:title" content="Serviços | FENIX EXTINTORES">
+  <meta property="og:description" content="AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático. Atendimento no RJ e Região.">
+  <meta property="og:image" content="https://www.seu-dominio.com/assets/og.jpg">
+  <link rel="icon" href="/static/favicon.ico" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px}
+    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.07)}
+    /* Dropdown com ponte – igual ao index */
+    .nav-group{position:relative}
+    .nav-bridge{position:absolute;left:0;top:100%;height:12px;width:21rem;z-index:10}
+    .dropdown{position:absolute;left:0;top:100%;width:21rem;border-radius:12px;padding:.5rem;background:#ef4444;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.15);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .18s}
+    .nav-group:hover .dropdown,.nav-group:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+    .dropdown a{display:block;padding:.85rem 1rem;border-radius:.75rem}
+    .dropdown a:hover{background:#dc2626}
+  </style>
+
+  <!-- JSON-LD: CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Serviços — FENIX EXTINTORES",
+    "url":"https://www.seu-dominio.com/servicos.html",
+    "about":[
+      {"@type":"Service","name":"AVCB & PPCI"},
+      {"@type":"Service","name":"Brigada de Incêndio"},
+      {"@type":"Service","name":"Sinalização de Rota de Fuga"},
+      {"@type":"Service","name":"Teste Hidrostático"}
+    ]
+  }
+  </script>
+</head>
 <body class="bg-slate-50 text-slate-800">
-<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
-  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
-    <a href="index.html" class="flex items-center gap-2">
-      <img src="assets/logo.svg" alt="Logo" class="h-9 w-9">
-      <span class="font-extrabold text-slate-900">RDR Extintores</span>
-    </a>
-    <nav class="hidden md:flex items-center gap-1">
-      <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Home</a>
-      
-    <div class="relative group">
-      <button class="px-3 py-2 rounded-md text-sm font-medium bg-primary text-white flex items-center gap-2">
-        <span>Serviços</span>
-        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+
+  <!-- Sprite do logo -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="logo-fenix" viewBox="0 0 64 64">
+      <defs><linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient></defs>
+      <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+      <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+    </symbol>
+  </svg>
+
+  <!-- HEADER (com hambúrguer) -->
+  <header class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" aria-label="Logo FENIX EXTINTORES"><use href="#logo-fenix"/></svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <!-- Navegação desktop -->
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="hover:text-red-600">HOME</a>
+
+        <div class="nav-group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-gray-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="nav-bridge"></div>
+          <div class="dropdown">
+            <a href="/servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="hover:text-red-600">BLOG</a>
+        <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <!-- CTA desktop -->
+      <a href="https://wa.me/5521959532161"
+         target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+
+      <!-- Botão hambúrguer (mobile) -->
+      <button id="nav-toggle"
+              class="md:hidden inline-flex items-center justify-center rounded-lg p-2 ml-2 border border-gray-200 text-gray-700 hover:bg-gray-100"
+              aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+        <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
       </button>
-      <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute top-full left-0 mt-2 w-72 bg-red-600 text-white rounded-xl shadow-lg p-2">
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
-        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a>
+    </div>
+  </header>
+
+  <!-- MENU MOBILE (drawer) -->
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
+    <nav class="absolute right-0 top-0 h-full w-[86%] max-w-[360px] bg-white shadow-2xl p-5 overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-2">
+          <svg class="h-7 w-7"><use href="#logo-fenix"/></svg>
+          <span class="font-extrabold">FENIX EXTINTORES</span>
+        </div>
+        <button id="nav-close" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Fechar menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <ul class="space-y-1 text-[15px] font-semibold">
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/">Home</a></li>
+        <li class="pt-2 text-xs uppercase text-gray-400 px-3">Serviços</li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/avcb-ppci.html">AVCB & PPCI</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/brigada-de-incendio.html">Brigada de Incêndio</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/sinalizacao-rota-de-fuga.html">Sinalização</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/teste-hidrostatico.html">Teste Hidrostático</a></li>
+        <li class="pt-2"><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/blog/index.html">Blog</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/sobre.html">Empresa</a></li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/contato.html">Contato</a></li>
+      </ul>
+
+      <div class="mt-6">
+        <a href="https://wa.me/5521959532161" target="_blank"
+           class="w-full inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-3 font-semibold hover:bg-emerald-700">
+          WhatsApp
+        </a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- HERO / TÍTULO -->
+  <section class="bg-gradient-to-br from-red-50 to-white border-b border-slate-200">
+    <div class="mx-auto container-max px-4 py-10">
+      <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
+        <ol class="inline-flex items-center gap-2">
+          <li><a class="hover:text-red-600" href="/">Início</a></li>
+          <li>/</li>
+          <li class="text-slate-700">Serviços</li>
+        </ol>
+      </nav>
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Serviços</h1>
+      <p class="mt-3 text-slate-600 max-w-3xl">Portfólio técnico completo para prevenção e combate a incêndio. Atendemos RJ e Região com engenheiro responsável.</p>
+    </div>
+  </section>
+
+  <!-- LISTA DE SERVIÇOS -->
+  <main class="mx-auto container-max px-4 py-12">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <a href="/servico/avcb-ppci.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition">
+        <h3 class="font-semibold">AVCB & PPCI</h3>
+        <p class="text-slate-600 mt-2">Projetos, ART e regularização no CBMERJ.</p>
+      </a>
+      <a href="/servico/brigada-de-incendio.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition">
+        <h3 class="font-semibold">Brigada de Incêndio</h3>
+        <p class="text-slate-600 mt-2">Treinamentos, dimensionamento e simulados.</p>
+      </a>
+      <a href="/servico/sinalizacao-rota-de-fuga.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition">
+        <h3 class="font-semibold">Sinalização</h3>
+        <p class="text-slate-600 mt-2">Rotas, placas fotoluminescentes e mapas.</p>
+      </a>
+      <a href="/servico/teste-hidrostatico.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition">
+        <h3 class="font-semibold">Teste Hidrostático</h3>
+        <p class="text-slate-600 mt-2">Ensaios e laudos com rastreabilidade.</p>
+      </a>
+    </div>
+  </main>
+
+  <!-- CTA FINAL -->
+  <section class="mx-auto container-max px-4 pb-14">
+    <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-8 shadow-soft">
+      <div class="md:flex items-center justify-between gap-6">
+        <div class="md:max-w-xl">
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Precisa regularizar ou manter tudo em dia?</h3>
+          <p class="text-slate-600">Fale com um especialista e receba orçamento em minutos.</p>
+        </div>
+        <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold hover:bg-red-700 mt-4 md:mt-0">
+          Falar no WhatsApp
+        </a>
       </div>
     </div>
-    
-      <a href="/blog/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Blog</a>
-      <a href="sobre.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Empresa</a>
-      <a href="contato.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Contato</a>
-    </nav>
-    <a href="https://wa.me/5521999999999?text=Olá!%20Quero%20um%20orçamento%20de%20extintores." class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:opacity-90">WhatsApp</a>
-  </div>
-</header>
+  </section>
 
-<main class="container mx-auto px-4 py-14">
-  <h1 class="text-3xl font-bold mb-6">Serviços</h1>
-  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-    <a href="servico/avcb-ppci.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">AVCB & PPCI</h3><p class="text-slate-600 mt-2">Projetos e regularização.</p></a>
-    <a href="servico/brigada-de-incendio.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">Brigada de Incêndio</h3><p class="text-slate-600 mt-2">Treinamentos e planos.</p></a>
-    <a href="servico/sinalizacao-rota-de-fuga.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">Sinalização</h3><p class="text-slate-600 mt-2">Rotas e placas.</p></a>
-    <a href="servico/teste-hidrostatico.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">Teste Hidrostático</h3><p class="text-slate-600 mt-2">Reteste NBR.</p></a>
-  </div>
-</main>
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" aria-hidden="true"><use href="#logo-fenix"/></svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-slate-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 95953-2161</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="mx-auto container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
 
-<footer class="mt-24 border-t border-slate-200">
-  <div class="container mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
-    <div class="space-y-2">
-      <div class="flex items-center gap-2"><img class="h-8 w-8" src="assets/logo.svg"><strong>RDR Extintores</strong></div>
-      <p class="text-slate-600">Segurança contra incêndio no RJ: recarga, manutenção e projetos.</p>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-2">Serviços</h4>
-      <ul class="space-y-1 text-slate-600">
-        <li><a class="hover:text-primary" href="servico/avcb-ppci.html">AVCB & PPCI</a></li>
-        <li><a class="hover:text-primary" href="servico/brigada-de-incendio.html">Brigada de Incêndio</a></li>
-        <li><a class="hover:text-primary" href="servico/sinalizacao-rota-de-fuga.html">Sinalização de Rota</a></li>
-        <li><a class="hover:text-primary" href="servico/teste-hidrostatico.html">Teste Hidrostático</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-2">Contato</h4>
-      <ul class="space-y-1 text-slate-600">
-        <li>Tel: (21) 99999-9999</li>
-        <li>Email: contato@site-extintores.com.br</li>
-        <li>Rio de Janeiro - RJ</li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-2">Atendimento</h4>
-      <p class="text-slate-600">Seg a Sex: 8h–18h<br>Sáb: 8h–12h</p>
-    </div>
-  </div>
-  <div class="border-t border-slate-200 py-4 text-center text-xs text-slate-500">© 2025 RDR Extintores — Clone para demonstração.</div>
-</footer>
+  <!-- WhatsApp flutuante -->
+  <a href="https://wa.me/5521959532161?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20servi%C3%A7os."
+     class="fixed bottom-6 right-6 rounded-full shadow-xl bg-emerald-600 p-3 md:p-4 hover:bg-emerald-700"
+     aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M20.52 3.48A11.89 11.89 0 0 0 12.06 0C5.52 0 .2 5.3.2 11.86c0 2.09.54 4.13 1.57 5.94L0 24l6.36-1.67a11.76 11.76 0 0 0 5.7 1.46h.01c6.54 0 11.86-5.31 11.86-11.86 0-3.17-1.24-6.15-3.41-8.45ZM12.06 21.3h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.77 1 .99-3.68-.22-.37a9.38 9.38 0 0 1-1.43-4.97C2.46 6.67 6.67 2.46 12.06 2.46c2.45 0 4.76.95 6.49 2.66a9.1 9.1 0 0 1 2.67 6.48c0 5.4-4.4 9.7-9.16 9.7Zm5.03-7.23c-.27-.14-1.57-.77-1.81-.86-.24-.09-.42-.14-.6.14-.18.27-.69.86-.85 1.03-.16.18-.31.2-.58.07-.27-.13-1.15-.42-2.19-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.45-.83-1.98-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47 .07-.72 .34-.24 .27-.95 .93-.95 2.25 0 1.32 .97 2.59 1.1 2.77 .14 .18 1.9 2.9 4.6 4.05 .64 .28 1.14 .45 1.53 .57 .64 .2 1.22 .17 1.68 .1 .51-.08 1.57-.64 1.79-1.27 .22-.63 .22-1.16 .15-1.27 -.06-.11 -.23 -.18 -.5 -.32Z"/>
+    </svg>
+  </a>
 
-<a href="https://wa.me/5521999999999?text=Olá!%20Quero%20um%20orçamento%20de%20extintores." class="fixed bottom-6 right-6 rounded-full shadow-xl bg-green-500 p-3 md:p-4" aria-label="WhatsApp">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7 text-white" viewBox="0 0 24 24" fill="currentColor">
-    <path d="M20 3.5A10.5 10.5 0 0 0 3.2 17.8L2 22l4.3-1.1A10.5 10.5 0 1 0 20 3.5Z"/>
-  </svg>
-</a>
-<script>
-  
-</script>
+  <script>
+    // Ano no footer
+    document.getElementById('ano').textContent = new Date().getFullYear();
 
+    // === Menu Mobile (drawer)
+    (function(){
+      const toggle = document.getElementById('nav-toggle');
+      const closeBtn = document.getElementById('nav-close');
+      const menu = document.getElementById('mobile-menu');
+      const backdrop = document.getElementById('mobile-backdrop');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
+      if(!toggle || !menu) return;
+
+      const open = () => {
+        menu.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        toggle.setAttribute('aria-expanded','true');
+        iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+      };
+      const close = () => {
+        menu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+        toggle.setAttribute('aria-expanded','false');
+        iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+      };
+
+      toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
+      closeBtn && closeBtn.addEventListener('click', close);
+      backdrop && backdrop.addEventListener('click', close);
+      window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') close(); });
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+    })();
+  </script>
 </body>
 </html>

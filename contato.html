@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contato | Site Extintores</title>
+  <title>Contato | FENIX Extintores</title>
   <meta name="description" content="Fale com um especialista: orçamentos, dúvidas e suporte técnico em segurança contra incêndio." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,12 +22,12 @@
   {
     "@context":"https://schema.org",
     "@type":"ContactPage",
-    "name":"Contato — Fenix Extintores",
+    "name":"Contato — FENIX Extintores",
     "url":"https://www.seu-dominio.com/contato.html",
     "about":{
-      "@type":"Organization",
-      "name":"Fenix Extintores",
-      "telephone":"+55 21 99999-9999",
+      "@type":"LocalBusiness",
+      "name":"FENIX Extintores",
+      "telephone":"+55 21 95953-2161",
       "address":{
         "@type":"PostalAddress",
         "streetAddress":"Rua Marina, 104",
@@ -36,6 +36,7 @@
         "postalCode":"21331-070",
         "addressCountry":"BR"
       },
+      "sameAs":["https://wa.me/5521959532161"],
       "hasMap":"https://www.google.com/maps?q=Rua%20Marina%2C%20104%20-%20Bento%20Ribeiro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021331-070&hl=pt-BR&z=16"
     }
   }
@@ -43,7 +44,7 @@
 </head>
 <body class="bg-white text-slate-800">
 
-  <!-- HEADER (igual às demais páginas, com 'ponte' no dropdown) -->
+  <!-- HEADER -->
   <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
     <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
       <!-- Logo -->
@@ -61,10 +62,11 @@
         <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
       </a>
 
+      <!-- Nav desktop -->
       <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
         <a href="/" class="hover:text-red-600">HOME</a>
 
-        <!-- Grupo com ponte -->
+        <!-- Dropdown Serviços com 'ponte' -->
         <div class="relative group">
           <button class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
             <span>SERVIÇOS</span>
@@ -72,11 +74,7 @@
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
             </svg>
           </button>
-
-          <!-- Ponte invisível -->
           <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
-
-          <!-- Dropdown -->
           <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
                       invisible opacity-0 translate-y-1 transition-all duration-150
                       group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
@@ -93,13 +91,56 @@
         <a href="/contato.html" class="text-red-600">CONTATO</a>
       </nav>
 
-      <!-- CTA WhatsApp -->
-      <a href="https://wa.me/5521999999999" target="_blank" rel="noopener"
+      <!-- CTA WhatsApp (desktop) -->
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
          class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
         Orçamento no WhatsApp
       </a>
+
+      <!-- Botão Hamburguer (mobile) -->
+      <button id="nav-toggle" aria-controls="mobile-menu" aria-expanded="false"
+              class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-slate-200"
+              aria-label="Abrir menu">
+        <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </header>
+
+  <!-- Drawer Mobile -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50">
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/40"></div>
+    <aside class="absolute right-0 top-0 h-full w-[82%] max-w-sm bg-white shadow-xl p-5 overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <span class="font-extrabold text-lg">FENIX EXTINTORES</span>
+        <button id="nav-close" class="inline-flex p-2 rounded-lg border border-slate-200" aria-label="Fechar menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <nav class="space-y-1 text-sm">
+        <a href="/" class="block px-3 py-2 rounded-lg hover:bg-slate-100">HOME</a>
+        <details class="group" open>
+          <summary class="px-3 py-2 rounded-lg hover:bg-slate-100 cursor-pointer flex items-center justify-between">
+            <span class="font-semibold text-red-600">SERVIÇOS</span>
+            <svg class="h-4 w-4 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="mt-1 pl-3 space-y-1">
+            <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviço de Teste Hidrostático</a>
+          </div>
+        </details>
+        <a href="/blog/index.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">BLOG</a>
+        <a href="/sobre.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">EMPRESA</a>
+        <a href="/contato.html" class="block px-3 py-2 rounded-lg bg-red-50 text-red-700">CONTATO</a>
+      </nav>
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+         class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </aside>
+  </div>
 
   <!-- HERO -->
   <section class="bg-gradient-to-br from-red-50 to-white">
@@ -116,25 +157,30 @@
         <p class="text-lg text-slate-600 mb-6">Tire dúvidas, solicite orçamentos e receba orientação técnica sobre extintores, brigada, sinalização, AVCB e testes hidrostáticos.</p>
         <div class="flex flex-wrap gap-3">
           <a href="#form" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Enviar mensagem</a>
-          <a href="https://wa.me/5521999999999" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Atendimento no WhatsApp</a>
+          <a href="https://wa.me/5521959532161" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Atendimento no WhatsApp</a>
         </div>
       </div>
-      <div class="rounded-2xl overflow-hidden shadow-soft img-ph aspect-video" role="img" aria-label="Time técnico e operação de campo"><img src="/assets/especialista.jpg  " alt=""></div>
+      <div class="rounded-2xl overflow-hidden shadow-soft img-ph aspect-video" role="img" aria-label="Time técnico e operação de campo">
+        <img src="/assets/especialista.jpg" alt="Especialista em segurança contra incêndio" class="w-full h-full object-cover">
+      </div>
     </div>
   </section>
 
   <!-- SEÇÃO CONTATO -->
   <section id="form" class="mx-auto container-max px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
     <!-- Formulário -->
-    <form action="https://formsubmit.co/contato@site-extintores.com.br" method="POST"
+    <form action="https://formsubmit.co/fenixextintoresltda@gmail.com" method="POST"
           class="bg-white rounded-2xl border border-slate-200 p-6 md:p-8 shadow-soft w-full">
       <h2 class="text-xl md:text-2xl font-extrabold mb-1">Envie sua mensagem</h2>
       <p class="text-slate-600 mb-6">Retornamos rapidamente com as informações solicitadas.</p>
 
-      <!-- FormSubmit config -->
+      <!-- FormSubmit -->
       <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_subject" value="Novo contato — Site Extintores">
-      <!-- <input type="hidden" name="_next" value="https://www.seu-dominio.com/obrigado.html"> -->
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_subject" value="Novo contato — FENIX Extintores">
+      <input type="hidden" name="_next" value="https://www.seu-dominio.com/contato.html#enviado">
+      <!-- Honeypot -->
+      <input type="text" name="_honey" style="display:none">
 
       <div class="grid gap-4">
         <div>
@@ -149,7 +195,7 @@
             <label class="block text-sm font-semibold mb-1" for="telefone">Telefone/WhatsApp</label>
             <input id="telefone" name="telefone" type="tel" required
                    class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500"
-                   placeholder="(21) 9 9999-9999">
+                   placeholder="(21) 9 5953-2161">
           </div>
           <div>
             <label class="block text-sm font-semibold mb-1" for="email">E-mail</label>
@@ -188,17 +234,19 @@
                 class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">
           Enviar
         </button>
+
+        <p id="enviado" class="hidden text-emerald-700 text-sm font-medium">Mensagem enviada! Em breve entraremos em contato.</p>
       </div>
     </form>
 
-    <!-- Bloco lateral de informações -->
+    <!-- Bloco lateral -->
     <aside class="space-y-6">
       <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-soft">
         <h3 class="text-lg font-bold mb-3">Canais de atendimento</h3>
         <ul class="space-y-2 text-slate-700">
           <li>💬 WhatsApp: <a class="text-emerald-700 font-semibold hover:underline" href="https://wa.me/5521959532161" target="_blank" rel="noopener">(21) 95953-2161</a></li>
           <li>📞 Telefone: (21) 95953-2161</li>
-          <li>✉️ E-mail: <a class="hover:underline" href="mailto:contato@site-extintores.com.br">fenixextintoresltda@gmail.com</a></li>
+          <li>✉️ E-mail: <a class="hover:underline" href="mailto:fenixextintoresltda@gmail.com">fenixextintoresltda@gmail.com</a></li>
         </ul>
       </div>
 
@@ -214,7 +262,6 @@
             Ver no Google Maps
           </a>
         </p>
-        <!-- MAPA EMBED (substitui o placeholder) -->
         <div class="mt-4 rounded-xl overflow-hidden border">
           <iframe
             src="https://www.google.com/maps?q=Rua%20Marina%2C%20104%20-%20Bento%20Ribeiro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021331-070&hl=pt-BR&z=16&output=embed"
@@ -307,38 +354,45 @@
   <script>
     // ano no footer
     document.getElementById('ano').textContent = new Date().getFullYear();
-      // === Menu Mobile (drawer) ===
-(function(){
-  const toggle = document.getElementById('nav-toggle');
-  const closeBtn = document.getElementById('nav-close');
-  const menu = document.getElementById('mobile-menu');
-  const backdrop = document.getElementById('mobile-backdrop');
-  const iconOpen = document.getElementById('icon-open');
-  const iconClose = document.getElementById('icon-close');
 
-  if(!toggle || !menu) return;
+    // revela msg de sucesso se voltar do form
+    if (location.hash === '#enviado') {
+      const ok = document.getElementById('enviado');
+      if (ok) ok.classList.remove('hidden');
+    }
 
-  const open = () => {
-    menu.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-    toggle.setAttribute('aria-expanded','true');
-    iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
-  };
-  const close = () => {
-    menu.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-    toggle.setAttribute('aria-expanded','false');
-    iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
-  };
+    // === Menu Mobile (drawer) ===
+    (function(){
+      const toggle = document.getElementById('nav-toggle');
+      const closeBtn = document.getElementById('nav-close');
+      const menu = document.getElementById('mobile-menu');
+      const backdrop = document.getElementById('mobile-backdrop');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
 
-  toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
-  closeBtn && closeBtn.addEventListener('click', close);
-  backdrop && backdrop.addEventListener('click', close);
-  // Fecha com ESC
-  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
-  // Fecha ao clicar em um link do drawer
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
-})();
+      if(!toggle || !menu) return;
+
+      const open = () => {
+        menu.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        toggle.setAttribute('aria-expanded','true');
+        iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+      };
+      const close = () => {
+        menu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+        toggle.setAttribute('aria-expanded','false');
+        iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+      };
+
+      toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
+      closeBtn && closeBtn.addEventListener('click', close);
+      backdrop && backdrop.addEventListener('click', close);
+      // Fecha com ESC
+      window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+      // Fecha ao clicar em um link do drawer
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+    })();
   </script>
 </body>
 </html>
