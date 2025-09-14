@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serviços de AVCB e PPCI | FENIX Extintores</title>
+  <meta name="description" content="Projeto AVCB/PPCI no RJ: análise técnica, laudos, execução, regularização e renovação. Atendimento completo até a emissão do documento do Corpo de Bombeiros." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px}
+    .prose p{margin:0 0 1rem 0;line-height:1.75}
+    .grid-cards{display:grid;grid-template-columns:1fr;gap:1rem}
+    @media(min-width:768px){.grid-cards{grid-template-columns:repeat(3,1fr);}}
+    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.07)}
+    .img-ph{background:repeating-linear-gradient(45deg,#f3f4f6,#f3f4f6 10px,#e5e7eb 10px,#e5e7eb 20px)}
+    .chip{font-size:.75rem;padding:.25rem .55rem;border-radius:999px;background:#fee2e2;color:#991b1b}
+  </style>
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FENIX Extintores",
+    "image": "https://www.seu-dominio.com/assets/logo.svg",
+    "url": "https://www.seu-dominio.com/servico/avcb-ppci.html",
+    "telephone": "+55 21 95953-2161",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://wa.me/5521959532161"],
+    "areaServed": "Rio de Janeiro e Região Metropolitana",
+    "knowsAbout": ["AVCB","PPCI","Laudo Técnico","Projeto de Incêndio","Renovação de AVCB"]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- HEADER -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" viewBox="0 0 64 64" aria-label="Logo">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="hover:text-red-600">HOME</a>
+
+        <div class="relative group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+
+          <!-- ponte -->
+          <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
+
+          <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
+                      invisible opacity-0 translate-y-1 transition-all duration-150
+                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                      group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+            <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg bg-white/10">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="hover:text-red-600">BLOG</a>
+        <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-red-50 to-white">
+    <div class="mx-auto container-max px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
+          <ol class="list-reset inline-flex items-center gap-2">
+            <li><a class="hover:text-red-600" href="/">Início</a></li>
+            <li>/</li>
+            <li class="text-slate-700">Serviços de AVCB e PPCI</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">Projeto, Execução e <span class="text-red-600">Regularização</span> — AVCB & PPCI</h1>
+        <p class="text-lg text-slate-600 mb-6">Somos especialistas em soluções completas de segurança contra incêndios. Do projeto à emissão e renovação do documento, acompanhamos <strong>todas as etapas</strong> com rigor técnico e agilidade.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contato" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Solicitar orçamento</a>
+          <a href="tel:+5521959532161" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Preferir ligar? (21) 95953-2161</a>
+        </div>
+
+        <div class="mt-6 grid sm:grid-cols-2 gap-2 text-sm">
+          <span class="chip">Segurança em primeiro lugar</span>
+          <span class="chip">Atendimento rápido e eficiente</span>
+          <span class="chip">Serviço completo e personalizado</span>
+          <span class="chip">Custo-benefício garantido</span>
+          <span class="chip">Compromisso com a sustentabilidade</span>
+        </div>
+      </div>
+
+      <!-- Imagem hero -->
+      <div class="rounded-2xl overflow-hidden shadow-soft img-ph aspect-video" role="img" aria-label="Projeto de prevenção e combate a incêndio">
+        <img src="/assets/ppci2.jpg" alt="Projeto AVCB e PPCI" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- SÍNTESE EM CARDS -->
+  <section class="mx-auto container-max px-4 py-10">
+    <div class="grid-cards">
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Projeto Técnico (AVCB & PPCI)</h3>
+        <p class="text-slate-600">Analisamos o imóvel, definimos as medidas de segurança (extintores, hidrantes, sinalização, iluminação, brigada, rotas) e preparamos as plantas, memoriais e ART para protocolo no Corpo de Bombeiros.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Laudos, ART e Execução</h3>
+        <p class="text-slate-600">Emitimos laudos e ART, fornecemos e instalamos os equipamentos conforme normas e executamos as adequações previstas, garantindo conformidade para a vistoria.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Renovação do AVCB</h3>
+        <p class="text-slate-600">Controlamos o vencimento (1 a 5 anos, conforme edificação), realizamos revalidações e atualizações necessárias e conduzimos o processo de renovação sem que a operação fique irregular.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <section id="estrutura" class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto container-max px-4 py-14">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-8">Entenda cada etapa</h2>
+      </div>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">O que é AVCB?</h3>
+        <div class="prose text-slate-700">
+          <p>O <strong>AVCB (Auto de Vistoria do Corpo de Bombeiros)</strong> é o documento que atesta que a edificação cumpre as normas de segurança contra incêndio e pânico. É obrigatório para o funcionamento regular de diversos estabelecimentos e evita multas e interdições.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Laudo para AVCB e Projeto</h3>
+        <div class="prose text-slate-700">
+          <p>Para obter o AVCB elaboramos o <strong>projeto técnico</strong> contemplando todas as medidas de segurança. Fazemos a análise completa do imóvel, indicamos melhorias e instalações necessárias, e preparamos a documentação exigida para a vistoria do Corpo de Bombeiros.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Renovar o AVCB é fundamental</h3>
+        <div class="prose text-slate-700">
+          <p>A <strong>renovação</strong> deve ocorrer dentro do prazo de validade (entre 1 e 5 anos, a depender da ocupação e do risco). A FENIX acompanha a data de vencimento e cuida de todo o processo para manter sua empresa regular.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">O que é PPCI?</h3>
+        <div class="prose text-slate-700">
+          <p>O <strong>PPCI (Plano de Prevenção e Proteção Contra Incêndio)</strong> reúne medidas técnicas, organizacionais e estruturais voltadas à prevenção e ao combate. Um PPCI bem elaborado reduz riscos, protege vidas e o patrimônio e serve de base para a emissão/renovação do AVCB.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Projeto PPCI e Execução</h3>
+        <div class="prose text-slate-700">
+          <p>Desenvolvemos o <strong>projeto PPCI personalizado</strong>, considerando tipologia da edificação, ocupação e cargas de incêndio. Após aprovação, executamos as medidas: instalação de extintores, hidrantes e mangotinhos, sinalização de rota de fuga, iluminação e alarme de emergência, luzes autônomas e <strong>formação de brigada</strong>.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Projeto de Extintores e Código Aplicável</h3>
+        <div class="prose text-slate-700">
+          <p>Cada <strong>projeto de extintores</strong> segue normas brasileiras e instruções técnicas do Corpo de Bombeiros. Os equipamentos são posicionados estrategicamente, com quantidades adequadas, garantindo atendimento às classes de fogo e à legislação vigente.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Diferença entre AVCB e PPCI</h3>
+        <div class="prose text-slate-700">
+          <p>O <strong>PPCI</strong> define as medidas preventivas e corretivas (plano e projeto). O <strong>AVCB</strong> é o <em>documento final</em> emitido pelo Corpo de Bombeiros que certifica que tudo foi implementado corretamente. Para emitir o AVCB, é necessário ter o PPCI aprovado e executado.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Etapas junto ao Corpo de Bombeiros</h3>
+        <div class="prose text-slate-700">
+          <ol class="list-decimal pl-6">
+            <li>Levantamento técnico e definição das medidas de segurança.</li>
+            <li>Elaboração de plantas, memoriais e ART.</li>
+            <li>Protocolo, análise e possíveis ajustes do projeto.</li>
+            <li>Execução/adequações e emissão de laudos.</li>
+            <li>Vistoria do Corpo de Bombeiros e emissão do AVCB.</li>
+          </ol>
+          <p class="mt-3">Os prazos variam conforme a complexidade e a agenda do órgão. Nós acompanhamos todo o fluxo até a liberação.</p>
+        </div>
+      </article>
+
+      <!-- CTA -->
+      <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-8 shadow-soft">
+        <div class="md:flex items-center justify-between gap-6">
+          <div class="md:max-w-xl">
+            <h4 class="text-lg md:text-xl font-bold mb-2">Precisa regularizar seu imóvel ou empresa?</h4>
+            <p class="text-slate-600">Fale com um especialista e receba um pré-orçamento gratuito em minutos.</p>
+          </div>
+          <div class="flex flex-col sm:flex-row gap-3 mt-4 md:mt-0">
+            <a href="#contato" class="inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-5 py-3 font-semibold hover:bg-emerald-700">Quero falar com um especialista</a>
+            <a href="tel:+5521959532161" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Ligar agora (21) 95953-2161</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS RELACIONADOS -->
+  <section class="mx-auto container-max px-4 py-14">
+    <div class="max-w-3xl mb-6">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Serviços relacionados</h2>
+      <p class="text-slate-600">Complementos essenciais para a conformidade do seu PPCI.</p>
+    </div>
+    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <a href="/servico/sinalizacao-rota-de-fuga.html" class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-soft transition">
+        <img src="/assets/sinalizacao1.jpg" alt="Sinalização de rota de fuga" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold">Sinalização – Rota de Fuga</h3>
+          <p class="text-sm text-slate-600 mt-1">Placas fotoluminescentes, layout e instalação conforme normas.</p>
+        </div>
+      </a>
+      <a href="/servico/brigada-de-incendio.html" class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-soft transition">
+        <img src="/assets/card-brigada1.jpg" alt="Brigada de Incêndio" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold">Serviços – Brigada de Incêndio</h3>
+          <p class="text-sm text-slate-600 mt-1">Treinamento, dimensionamento e simulados práticos.</p>
+        </div>
+      </a>
+      <a href="/servico/teste-hidrostatico.html" class="rounded-2xl border border-slate-200 overflow-hidden hover:shadow-soft transition">
+        <img src="/assets/Teste01.jpg" alt="Teste Hidrostático" class="w-full h-40 object-cover">
+        <div class="p-5">
+          <h3 class="font-semibold">Serviço de Teste Hidrostático</h3>
+          <p class="text-sm text-slate-600 mt-1">Ensaios, laudos e rastreabilidade para cilindros e mangueiras.</p>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="mx-auto container-max px-4 pb-14">
+    <div class="max-w-3xl mb-8">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Perguntas Frequentes</h2>
+      <p class="text-slate-600">Dúvidas comuns sobre AVCB, PPCI e regularização.</p>
+    </div>
+    <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-soft">
+      <details class="p-6" open>
+        <summary class="cursor-pointer font-semibold">Quem precisa de AVCB?</summary>
+        <div class="pt-3 text-slate-700">Estabelecimentos comerciais, industriais, condomínios, escolas, hotéis e outras ocupações previstas nas normas. Em geral, toda edificação que receba público ou exerça atividade econômica precisa do documento.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">Qual a validade do AVCB?</summary>
+        <div class="pt-3 text-slate-700">Varia de 1 a 5 anos, conforme o tipo de ocupação, área e risco da edificação. Recomendamos acompanhar o prazo para evitar a operação irregular.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">O que é PPCI?</summary>
+        <div class="pt-3 text-slate-700">É o plano/projeto que descreve e dimensiona as medidas de prevenção e proteção contra incêndios. Serve de base para implantar os sistemas e para a emissão/renovação do AVCB.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">Qual a diferença entre PPCI e AVCB?</summary>
+        <div class="pt-3 text-slate-700">PPCI = planejamento/ projeto das medidas. AVCB = certificação emitida pelos Bombeiros, após a vistoria, confirmando que tudo foi executado corretamente.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">Quem pode assinar o projeto?</summary>
+        <div class="pt-3 text-slate-700">Profissional habilitado com registro no conselho competente e ART/RRT. Na FENIX, trabalhamos com equipe técnica qualificada para cada etapa.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="bg-slate-900 text-white">
+    <div class="mx-auto container-max px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Faça seu orçamento hoje</h2>
+        <p class="text-slate-300 mb-6">Preencha os dados e nossa equipe retorna rapidamente. Também atendemos via WhatsApp.</p>
+        <ul class="space-y-2 text-slate-300 mb-6">
+          <li>📍 Rio de Janeiro – RJ</li>
+          <li>📞 <a class="underline hover:text-emerald-300" href="tel:+5521959532161">(21) 95953-2161</a></li>
+          <li>💬 WhatsApp: <a class="underline hover:text-emerald-300" href="https://wa.me/5521959532161" target="_blank" rel="noopener">clique para conversar</a></li>
+        </ul>
+      </div>
+
+      <form action="https://formsubmit.co/fenixextintoresltda@gmail.com" method="POST" class="bg-white text-slate-800 rounded-2xl p-6 md:p-8 shadow-soft w-full">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_subject" value="Orçamento — Página AVCB/PPCI">
+        <input type="hidden" name="_next" value="https://www.seu-dominio.com/servico/avcb-ppci.html#enviado">
+
+        <div class="grid gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Seu nome" />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="telefone">Telefone/WhatsApp</label>
+              <input id="telefone" name="telefone" type="tel" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="(21) 9 9999-9999" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="email">E-mail</label>
+              <input id="email" name="email" type="email" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="voce@exemplo.com" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="servico">Serviço desejado</label>
+            <select id="servico" name="servico" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+              <option>Projeto AVCB/PPCI</option>
+              <option>Laudos e ART</option>
+              <option>Renovação de AVCB</option>
+              <option>Teste Hidrostático</option>
+              <option>Consultoria</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Conte um pouco sobre o seu imóvel/empresa..."></textarea>
+          </div>
+          <div class="flex items-center gap-3">
+            <input id="lgpd" type="checkbox" class="w-4 h-4" required />
+            <label for="lgpd" class="text-sm">Concordo com o tratamento dos dados informados, conforme a LGPD.</label>
+          </div>
+          <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Enviar</button>
+          <p id="enviado" class="hidden text-emerald-700 text-sm font-medium">Formulário enviado! Em breve entraremos em contato.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g2)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-slate-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 95953-2161</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="mx-auto container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+    // revela mensagem de sucesso se voltar do form
+    if (location.hash === '#enviado') {
+      const ok = document.getElementById('enviado');
+      if (ok) ok.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>

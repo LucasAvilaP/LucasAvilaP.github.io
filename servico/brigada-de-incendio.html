@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Serviços de Brigada de Incêndio | Site Extintores</title>
+  <meta name="description" content="Treinamentos teóricos e práticos, formação e reciclagem de brigadistas. Dimensionamento, planos de emergência e documentação conforme NBR 14276 e NR 23." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px}
+    .prose p{margin:0 0 1rem 0;line-height:1.75}
+    .grid-cards{display:grid;grid-template-columns:1fr;gap:1rem}
+    @media(min-width:768px){.grid-cards{grid-template-columns:repeat(3,1fr);}}
+    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.07)}
+    .img-ph{background:repeating-linear-gradient(45deg,#f3f4f6,#f3f4f6 10px,#e5e7eb 10px,#e5e7eb 20px)}
+  </style>
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Site Extintores",
+    "image": "https://example.com/logo.svg",
+    "url": "https://example.com/servicos-de-brigada-de-incendio",
+    "telephone": "+55 21 95953-2161",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rio de Janeiro",
+      "addressRegion": "RJ",
+      "addressCountry": "BR"
+    },
+    "sameAs": ["https://wa.me/5521959532161"],
+    "areaServed": "Brasil",
+    "knowsAbout": ["Brigada de Incêndio","NR 23","NBR 14276","Treinamento de Brigadistas","Plano de Emergência"]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- HEADER/NAV (igual ao home/AVCB) -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <!-- Logo inline -->
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" viewBox="0 0 64 64" aria-label="Logo">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+  <a href="/" class="hover:text-red-600">HOME</a>
+
+  <!-- Wrapper do menu com 'ponte' física -->
+  <div class="relative group">
+    <button
+      class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600"
+      aria-haspopup="true" aria-expanded="false"
+    >
+      <span>SERVIÇOS</span>
+      <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
+      </svg>
+    </button>
+
+    <!-- PONTE: elemento invisível que mantém o hover do group -->
+    <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
+
+    <!-- Dropdown (sem pointer-events-none) -->
+    <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
+                invisible opacity-0 translate-y-1 transition-all duration-150
+                group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+      <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de AVCB e PPCI</a>
+      <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg bg-white/10">Serviços de Brigada de Incêndio</a>
+      <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Sinalização para Rota de Fuga</a>
+      <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Teste Hidrostático</a>
+    </div>
+  </div>
+
+  <a href="/blog/index.html" class="hover:text-red-600">BLOG</a>
+  <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+  <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+</nav>
+
+
+          
+
+      <!-- CTA WhatsApp -->
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </div>  
+  </header>
+  
+
+  <!-- Hero (mesma arquitetura do AVCB) -->
+  <section class="bg-gradient-to-br from-red-50 to-white">
+    <div class="mx-auto container-max px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
+          <ol class="list-reset inline-flex items-center gap-2">
+            <li><a class="hover:text-red-600" href="/">Início</a></li>
+            <li>/</li>
+            <li class="text-slate-700">Serviços de Brigada de Incêndio</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+          Serviços de <span class="text-red-600">Brigada de Incêndio</span>
+        </h1>
+        <p class="text-lg text-slate-600 mb-6">
+          Formação, reciclagem e dimensionamento de brigadistas, planos de emergência e documentação conforme
+          <strong>NR 23</strong> e <strong>NBR 14276</strong>.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contato" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Solicitar orçamento</a>
+          <a href="#estrutura" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Ver etapas</a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-soft img-ph aspect-video" role="img" aria-label="Projeto de prevenção e combate a incêndio">
+        <img src="/assets/brigada01.webp" alt="Projeto AVCB e PPCI" class="w-full h-full object-cover">
+      </div>
+    </div>
+  </section>
+
+  <!-- Cards síntese -->
+  <section class="mx-auto container-max px-4 py-10">
+    <div class="grid-cards">
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Treinamento & Reciclagem</h3>
+        <p class="text-slate-600">Aulas teóricas e práticas com extintores e hidrantes, simulações e certificação individual.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Dimensionamento</h3>
+        <p class="text-slate-600">Cálculo de brigadistas por risco, ocupação, turnos e população conforme NBR 14276.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Planos & Documentação</h3>
+        <p class="text-slate-600">Plano de abandono, PCT, relatórios e atendimento à legislação vigente (NR 23).</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estrutura em blocos (conteúdo da Brigada) -->
+  <section id="estrutura" class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto container-max px-4 py-14">
+      <div class="max-w-3xl">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-8">Entenda cada etapa</h2>
+      </div>
+
+      <article class="mb-12 prose text-slate-700 max-w-3xl">
+        <p>Na RDR Extintores, trabalhamos com foco total na proteção de vidas e patrimônios através de soluções especializadas em segurança contra incêndios. Um dos nossos principais serviços é a atuação com brigada de incêndio RJ, oferecendo uma equipe altamente treinada e preparada para atender as mais diversas situações de risco.</p>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">O que é Brigada de Incêndio?</h3>
+        <div class="prose text-slate-700">
+          <p>A brigada de incêndio é formada por um grupo de profissionais ou colaboradores habilitados a atuar em ações de prevenção e combate ao fogo, evacuação de áreas e atendimento de primeiros socorros. Saber o que é brigada de incêndio é fundamental para entender sua importância dentro de empresas e condomínios. Este grupo desempenha papel vital em situações de emergência e é regulamentado pela NR 23 brigada de incêndio, que determina as condições mínimas para formação e atuação dos brigadistas.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">A Importância da Brigada de Incêndio Profissional</h3>
+        <div class="prose text-slate-700">
+          <p>Contar com um time capacitado faz toda a diferença em momentos críticos. A brigada de incêndio e emergência é treinada para agir com agilidade e precisão, reduzindo riscos e protegendo vidas. A obrigatoriedade da formação de brigadas está prevista na lei da brigada de incêndio, aplicável a diversos tipos de edificações, como escritórios, galpões, condomínios residenciais e espaços de grande circulação de pessoas.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Brigada de Incêndio: Condomínio e Empresa</h3>
+        <div class="prose text-slate-700">
+          <p>A presença de brigadistas em ambientes corporativos e residenciais é essencial. Sim, brigada de incêndio em condomínio é obrigatório e também é indispensável em ambientes empresariais, sendo um requisito fundamental para atender às exigências da legislação. A brigada de incêndio empresa deve ser dimensionada de acordo com as características do local, em conformidade com a NBR 14276 brigada de incêndio.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Nossos Serviços de Brigada de Incêndio</h3>
+        <div class="prose text-slate-700">
+          <p>Na RDR Extintores, fornecemos uma solução completa em serviços de brigada de incêndio, incluindo:</p>
+          <ul class="list-disc pl-6">
+            <li><strong>Prevenção e combate a incêndios:</strong> A equipe atua ativamente na identificação de riscos e aplica medidas preventivas.</li>
+            <li><strong>Plano de abandono de área:</strong> Atuamos com estratégias de evacuação eficientes.</li>
+            <li><strong>Primeiros socorros:</strong> Brigadistas preparados prestam atendimento imediato até a chegada dos serviços especializados.</li>
+            <li><strong>Simulações e treinamentos:</strong> Promovemos exercícios práticos que validam a eficiência da equipe em situações reais.</li>
+            <li><strong>Elaboração de PCT brigada de incêndio:</strong> Garantimos toda a documentação técnica e legal.</li>
+          </ul>
+          <p class="mt-3">Todas as nossas atividades estão alinhadas às exigências da NR brigada de incêndio e seguem padrões estabelecidos na NBR 14276.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Atribuições da Brigada de Incêndio</h3>
+        <div class="prose text-slate-700">
+          <p>As atribuições da brigada de incêndio vão além do combate ao fogo. Estão incluídas:</p>
+          <ul class="list-disc pl-6">
+            <li>Monitoramento constante de condições de risco;</li>
+            <li>Treinamentos periódicos;</li>
+            <li>Reforço das ações de prevenção;</li>
+            <li>Suporte em primeiros socorros;</li>
+            <li>Colaboração com os bombeiros em situações emergenciais.</li>
+          </ul>
+          <p class="mt-3">Essas são as atribuições de emergência da brigada de incêndio, que asseguram uma atuação completa e eficaz.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Brigada Voluntária de Incêndio</h3>
+        <div class="prose text-slate-700">
+          <p>Além das brigadas contratadas, também existe a brigada voluntária de incêndio, composta por colaboradores internos treinados para agir em situações de risco, agregando valor à cultura de segurança da organização.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Dimensionamento da Brigada de Incêndio</h3>
+        <div class="prose text-slate-700">
+          <p>O dimensionamento da brigada de incêndio deve considerar:</p>
+          <ul class="list-disc pl-6">
+            <li>Grau de risco da atividade;</li>
+            <li>Número de pessoas no local;</li>
+            <li>Tipo de edificação;</li>
+            <li>Turnos de funcionamento.</li>
+          </ul>
+          <p class="mt-3">Esses elementos definem a quantidade ideal de brigadistas, conforme estabelece a NBR 14276.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Equipamentos da Brigada de Incêndio</h3>
+        <div class="prose text-slate-700">
+          <p>A RDR Extintores disponibiliza todos os itens necessários para a atuação da brigada, incluindo:</p>
+          <ul class="list-disc pl-6">
+            <li>Extintores de incêndio adequados a cada classe;</li>
+            <li>Mangueiras e hidrantes;</li>
+            <li>EPIs completos (botas, capacetes, roupas especiais);</li>
+            <li>Alarmes e sistemas de detecção de incêndio.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Qual o Objetivo da Brigada de Incêndio?</h3>
+        <div class="prose text-slate-700">
+          <p>O objetivo da brigada de incêndio é preservar vidas e bens, agindo com rapidez em emergências. Ao entender qual a função da brigada de incêndio, fica evidente que seu papel é essencial para qualquer instituição que valorize a segurança.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Declaração de Brigada de Incêndio</h3>
+        <div class="prose text-slate-700">
+          <p>Ela é obrigatória e deve ser emitida por empresa especializada, como a RDR Extintores. Sem essa documentação, o estabelecimento pode ser multado ou interditado.</p>
+        </div>
+      </article>
+
+      <article class="mb-12">
+        <h3 class="text-xl md:text-2xl font-bold mb-3">Tudo Sobre Brigada de Incêndio – Conclusão</h3>
+        <div class="prose text-slate-700">
+          <p>Agora que você conhece tudo sobre brigada de incêndio, não deixe a segurança da sua empresa ou prédio nas mãos da sorte. Fale com nossa equipe especializada e receba um atendimento completo para implantar sua brigada com eficácia e responsabilidade.</p>
+        </div>
+      </article>
+
+      <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-8 shadow-soft">
+        <div class="md:flex items-center justify-between gap-6">
+          <div class="md:max-w-xl">
+            <h4 class="text-lg md:text-xl font-bold mb-2">Precisa formar ou reciclar sua Brigada?</h4>
+            <p class="text-slate-600">Fale com um especialista agora mesmo e receba um pré-orçamento gratuito em minutos.</p>
+          </div>
+          <a href="#contato" class="inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-5 py-3 font-semibold mt-4 md:mt-0 hover:bg-emerald-700">Quero falar com um especialista</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (mesma seção do AVCB, com temas de brigada) -->
+  <section id="faq" class="mx-auto container-max px-4 py-14">
+    <div class="max-w-3xl mb-8">
+      <h2 class="text-2xl md:text-3xl font-extrabold">Perguntas Frequentes</h2>
+      <p class="text-slate-600">Dúvidas comuns sobre formação e dimensionamento de Brigada de Incêndio.</p>
+    </div>
+    <div class="divide-y divide-slate-200 border border-slate-200 rounded-2xl overflow-hidden shadow-soft">
+      <details class="p-6" open>
+        <summary class="cursor-pointer font-semibold">Brigada é obrigatória no meu tipo de imóvel?</summary>
+        <div class="pt-3 text-slate-700">Depende da ocupação, área construída e população fixa/fluente, conforme legislação local e NBR 14276.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">Com que frequência devo reciclar os brigadistas?</summary>
+        <div class="pt-3 text-slate-700">Recomenda-se reciclagem periódica (geralmente anual), além de simulações e atualização de plano de emergência.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">Qual o tamanho ideal da minha brigada?</summary>
+        <div class="pt-3 text-slate-700">É definido via dimensionamento: grau de risco, número de pessoas, turnos e particularidades da edificação.</div>
+      </details>
+      <details class="p-6">
+        <summary class="cursor-pointer font-semibold">Vocês emitem documentação da brigada?</summary>
+        <div class="pt-3 text-slate-700">Sim. Relatórios, certificados, PCT e demais documentos para auditorias e órgãos competentes.</div>
+      </details>
+    </div>
+  </section>
+
+  <!-- Contato (igual ao AVCB) -->
+  <section id="contato" class="bg-slate-900 text-white">
+    <div class="mx-auto container-max px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Solicite seu orçamento</h2>
+        <p class="text-slate-300 mb-6">Preencha os dados e nossa equipe retornará rapidamente.</p>
+        <ul class="space-y-2 text-slate-300 mb-6">
+          <li>📍 Rio de Janeiro – RJ</li>
+          <li>📞 (21) 95953-2161</li>
+          <li>💬 WhatsApp: <a class="underline hover:text-emerald-300" href="https://wa.me/5521959532161" target="_blank" rel="noopener">clique para conversar</a></li>
+        </ul>
+      </div>
+      <form class="bg-white text-slate-800 rounded-2xl p-6 md:p-8 shadow-soft w-full">
+        <div class="grid gap-4">
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="nome">Nome completo</label>
+            <input id="nome" name="nome" type="text" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Seu nome" />
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="telefone">Telefone/WhatsApp</label>
+              <input id="telefone" name="telefone" type="tel" required class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="(21) 9 9999-9999" />
+            </div>
+            <div>
+              <label class="block text-sm font-semibold mb-1" for="email">E-mail</label>
+              <input id="email" name="email" type="email" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="voce@exemplo.com" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="servico">Serviço desejado</label>
+            <select id="servico" name="servico" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+              <option>Brigada de Incêndio (formação/reciclagem)</option>
+              <option>Dimensionamento de Brigada</option>
+              <option>Plano de Emergência / Abandono</option>
+              <option>Outros (descrever na mensagem)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1" for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500" placeholder="Conte um pouco sobre o seu imóvel/empresa..."></textarea>
+          </div>
+          <div class="flex items-center gap-3">
+            <input id="lgpd" type="checkbox" class="w-4 h-4" required />
+            <label for="lgpd" class="text-sm">Concordo com o tratamento dos dados informados, conforme a LGPD.</label>
+          </div>
+          <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER (igual ao home/AVCB) -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g2)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-slate-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 95953-2161</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="mx-auto container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear()
+  </script>
+</body>
+</html>

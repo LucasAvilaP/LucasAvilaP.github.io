@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Serviços | RDR Extintores - Clone</title>
+  <meta name="description" content="Conheça todos os serviços: AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático.">
+  <meta name="keywords" content="extintores, recarga, manutenção, brigada de incêndio, AVCB, PPCI, RJ, Rio de Janeiro">
+  <meta property="og:title" content="Serviços">
+  <meta property="og:description" content="Conheça todos os serviços: AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#ea1d1d', dark: '#0f172a' }
+        }
+      }
+    }
+  </script>
+  <style>.container{max-width:1200px}</style>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2">
+      <img src="assets/logo.svg" alt="Logo" class="h-9 w-9">
+      <span class="font-extrabold text-slate-900">RDR Extintores</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-1">
+      <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Home</a>
+      
+    <div class="relative group">
+      <button class="px-3 py-2 rounded-md text-sm font-medium bg-primary text-white flex items-center gap-2">
+        <span>Serviços</span>
+        <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+      </button>
+      <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all absolute top-full left-0 mt-2 w-72 bg-red-600 text-white rounded-xl shadow-lg p-2">
+        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
+        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
+        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
+        <a class="block px-4 py-3 hover:bg-red-700 rounded-lg" href="servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a>
+      </div>
+    </div>
+    
+      <a href="/blog/index.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Blog</a>
+      <a href="sobre.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Empresa</a>
+      <a href="contato.html" class="px-3 py-2 rounded-md text-sm font-medium text-slate-700 hover:bg-slate-100">Contato</a>
+    </nav>
+    <a href="https://wa.me/5521999999999?text=Olá!%20Quero%20um%20orçamento%20de%20extintores." class="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-primary text-white font-semibold shadow hover:opacity-90">WhatsApp</a>
+  </div>
+</header>
+
+<main class="container mx-auto px-4 py-14">
+  <h1 class="text-3xl font-bold mb-6">Serviços</h1>
+  <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <a href="servico/avcb-ppci.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">AVCB & PPCI</h3><p class="text-slate-600 mt-2">Projetos e regularização.</p></a>
+    <a href="servico/brigada-de-incendio.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">Brigada de Incêndio</h3><p class="text-slate-600 mt-2">Treinamentos e planos.</p></a>
+    <a href="servico/sinalizacao-rota-de-fuga.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">Sinalização</h3><p class="text-slate-600 mt-2">Rotas e placas.</p></a>
+    <a href="servico/teste-hidrostatico.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition"><h3 class="font-semibold">Teste Hidrostático</h3><p class="text-slate-600 mt-2">Reteste NBR.</p></a>
+  </div>
+</main>
+
+<footer class="mt-24 border-t border-slate-200">
+  <div class="container mx-auto px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+    <div class="space-y-2">
+      <div class="flex items-center gap-2"><img class="h-8 w-8" src="assets/logo.svg"><strong>RDR Extintores</strong></div>
+      <p class="text-slate-600">Segurança contra incêndio no RJ: recarga, manutenção e projetos.</p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">Serviços</h4>
+      <ul class="space-y-1 text-slate-600">
+        <li><a class="hover:text-primary" href="servico/avcb-ppci.html">AVCB & PPCI</a></li>
+        <li><a class="hover:text-primary" href="servico/brigada-de-incendio.html">Brigada de Incêndio</a></li>
+        <li><a class="hover:text-primary" href="servico/sinalizacao-rota-de-fuga.html">Sinalização de Rota</a></li>
+        <li><a class="hover:text-primary" href="servico/teste-hidrostatico.html">Teste Hidrostático</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">Contato</h4>
+      <ul class="space-y-1 text-slate-600">
+        <li>Tel: (21) 99999-9999</li>
+        <li>Email: contato@site-extintores.com.br</li>
+        <li>Rio de Janeiro - RJ</li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-2">Atendimento</h4>
+      <p class="text-slate-600">Seg a Sex: 8h–18h<br>Sáb: 8h–12h</p>
+    </div>
+  </div>
+  <div class="border-t border-slate-200 py-4 text-center text-xs text-slate-500">© 2025 RDR Extintores — Clone para demonstração.</div>
+</footer>
+
+<a href="https://wa.me/5521999999999?text=Olá!%20Quero%20um%20orçamento%20de%20extintores." class="fixed bottom-6 right-6 rounded-full shadow-xl bg-green-500 p-3 md:p-4" aria-label="WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M20 3.5A10.5 10.5 0 0 0 3.2 17.8L2 22l4.3-1.1A10.5 10.5 0 1 0 20 3.5Z"/>
+  </svg>
+</a>
+
+</body>
+</html>

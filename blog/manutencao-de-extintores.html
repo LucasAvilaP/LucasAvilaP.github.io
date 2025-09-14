@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manutenção de Extintores: Tudo o que Você Precisa Saber | Blog</title>
+  <meta name="description" content="Guia simples e completo sobre manutenção de extintores: níveis 1, 2 e 3, prazos, quem pode fazer e como escolher a melhor empresa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px}
+    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.07)}
+    .prose p{margin:0 0 1rem 0;line-height:1.8}
+    .prose h2,.prose h3{margin:1.2rem 0 .6rem 0}
+    .prose ul{margin:.5rem 0 1rem 1.25rem;list-style:disc}
+    .prose li{margin:.25rem 0}
+    .badge{font-size:.75rem;padding:.25rem .5rem;border-radius:.5rem;background:#eef2ff;color:#3730a3}
+    .toc a{display:block;padding:.35rem .5rem;border-radius:.5rem}
+    .toc a:hover{background:#f1f5f9}
+  </style>
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BlogPosting",
+    "headline":"Manutenção de Extintores: Tudo o que Você Precisa Saber",
+    "author":{"@type":"Organization","name":"RDR Extintores"},
+    "datePublished":"2025-03-10",
+    "dateModified":"2025-03-10",
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.seu-dominio.com/blog/manutencao-de-extintores.html"},
+    "image":"https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop",
+    "description":"Guia prático sobre manutenção de extintores, níveis, prazos e como escolher empresa certificada."
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- HEADER/NAV (igual às outras páginas, com 'ponte' no dropdown) -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" viewBox="0 0 64 64" aria-label="Logo">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="hover:text-red-600">HOME</a>
+
+        <!-- Grupo com ponte -->
+        <div class="relative group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+          <!-- Ponte para não sumir ao descer o mouse -->
+          <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
+          <!-- Dropdown -->
+          <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
+                      invisible opacity-0 translate-y-1 transition-all duration-150
+                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                      group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+            <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="text-red-600">BLOG</a>
+        <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <a href="https://wa.me/5521999999999" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO / BREADCRUMB -->
+  <section class="bg-gradient-to-br from-red-50 to-white">
+    <div class="mx-auto container-max px-4 py-10 md:py-14">
+      <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
+        <ol class="inline-flex items-center gap-2">
+          <li><a class="hover:text-red-600" href="/">Início</a></li>
+          <li>/</li>
+          <li><a class="hover:text-red-600" href="/blog/index.html">Blog</a></li>
+          <li>/</li>
+          <li class="text-slate-700">Manutenção de Extintores</li>
+        </ol>
+      </nav>
+      <div class="grid md:grid-cols-3 gap-8 items-start">
+        <div class="md:col-span-2">
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-3">
+            Manutenção de Extintores: Tudo o que Você Precisa Saber
+          </h1>
+          <p class="text-slate-600">Guia completo e fácil para manter seus extintores em dia — níveis 1, 2 e 3, prazos e como escolher empresa certificada.</p>
+          <div class="mt-3 flex items-center gap-3 text-xs text-slate-500">
+            <span class="badge">Manutenção</span>
+            <span>Publicado em 10 mar 2025</span>
+            <span>•</span>
+            <span>Leitura: ~6 min</span>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-soft h-44 md:h-full img-ph">
+          <img src="/assets/extintor-pagina-manutencao.jpg" alt="Manutenção de extintores" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEÚDO -->
+  <main class="mx-auto container-max px-4 py-10">
+    <div class="grid lg:grid-cols-12 gap-10">
+      <!-- Artigo -->
+      <article class="prose lg:col-span-8 text-slate-800">
+        <p><strong>Aprenda a manter seus extintores em dia</strong> com a RDR Extintores e garanta a proteção da sua vida e patrimônio. Um guia completo e fácil de entender.</p>
+
+        <h2>Resumo Rápido: Manutenção de Extintores</h2>
+        <p>Manter os extintores funcionando bem é vital para a segurança. Eles são a primeira linha de defesa contra incêndios. Este guia mostra a importância da manutenção de extintores, quem pode fazer, e como escolher o melhor serviço. Vamos simplificar o assunto para você.</p>
+        <p>É crucial que a manutenção de extintores siga as normas. Assim, a segurança de todos fica garantida. Conte com empresas sérias como a RDR Extintores para isso.</p>
+
+        <h2>Por Que a Manutenção de Extintores É Tão Importante?</h2>
+        <p>Extintores são equipamentos de emergência. Eles servem para apagar pequenos focos de incêndio. Sem a manutenção de extintores, eles podem falhar na hora H. E isso coloca vidas e bens em perigo.</p>
+        <p>Um extintor que não funciona é como não ter extintor nenhum. Por isso, a manutenção de extintores periódica é uma obrigação legal. Mais importante, é um ato de responsabilidade com a segurança.</p>
+        <p>Dados do Corpo de Bombeiros Militar do Rio de Janeiro mostram que a maioria dos incêndios é controlada nos primeiros minutos. Isso só acontece se houver extintores em dia. A falta de manutenção de extintores é uma das principais causas de falha.</p>
+        <img src="/assets/extintor-pagina-manutencao2.jpg" alt="manutenção de extintores">
+        <h2>O Que É a Manutenção de Extintores?</h2>
+        <p>A manutenção de extintores é um processo simples. É verificar e arrumar as partes do extintor. O objetivo é garantir que ele funcione perfeitamente.</p>
+        <p>Existem dois tipos principais: a preventiva e a corretiva. A preventiva evita problemas antes que aconteçam. A corretiva arruma o que já está quebrado. Tudo isso segue as regras do INMETRO e da ABNT.</p>
+
+        <h2>Quem Pode Fazer a Manutenção de Extintores?</h2>
+        <p>A manutenção de extintores não é para qualquer um. <strong>Só empresas registradas no SBAC (INMETRO)</strong> podem fazer. Essas empresas têm profissionais treinados, ferramentas adequadas e seguem regras rigorosas para sua segurança. Sempre peça o registro.</p>
+        <blockquote>
+          <p><strong>Dica do Gabriel, CEO da RDR Extintores:</strong> “Não arrisque a segurança da sua família ou negócio. Escolha sempre uma empresa que mostre o registro no INMETRO. Na RDR Extintores, nossa prioridade é a sua tranquilidade!”</p>
+        </blockquote>
+
+        <h2>Os Níveis da Manutenção de Extintores: 1, 2 e 3</h2>
+
+        <h3>Manutenção de Nível 1: A Inspeção Rápida</h3>
+        <p>Checagem no local, limpeza e pequenos apertos. Sem abrir o extintor. Deve ser feita a cada <strong>6 meses</strong>. Se houver algo sério, segue para Nível 2.</p>
+
+        <h3>Manutenção de Nível 2: O Reparo Completo</h3>
+        <p>Realizada em empresa especializada: desmontagem, recarga, inspeção de peças e substituições quando necessário. Pode incluir pintura, selos e lacres do INMETRO. Periodicidade: <strong>12 meses</strong>.</p>
+
+        <h3>Manutenção de Nível 3: A Troca Essencial</h3>
+        <p>Mais completa: ocorre a cada <strong>5 anos</strong>. Envolve troca do cilindro, teste hidrostático e revisão geral, garantindo a resistência do vaso sob pressão.</p>
+
+        <h2>Quando Fazer Cada Tipo de Manutenção?</h2>
+        <ul>
+          <li><strong>Nível 1:</strong> a cada 6 meses – inspeção visual e rápida no local.</li>
+          <li><strong>Nível 2:</strong> a cada 12 meses – recarga e reparo geral em empresa.</li>
+          <li><strong>Nível 3:</strong> a cada 5 anos – troca do cilindro e teste hidrostático.</li>
+        </ul>
+        <p>O Corpo de Bombeiros exige que esses prazos sejam seguidos. Não cumprir pode gerar multas e, sobretudo, risco real à segurança.</p>
+
+        <h2>Leia também</h2>
+        <ul>
+          <li><a class="text-red-600 underline" href="/blog/validade-do-extintor.html">Validade do Extintor: Como Saber se Está Vencido</a></li>
+          <li><a class="text-red-600 underline" href="/blog/diferenca-entre-extintor-abc-e-bc.html">Diferença entre o Extintor ABC e BC</a></li>
+        </ul>
+
+        <h2>Estudo de Caso Real: A Importância da Manutenção Periódica</h2>
+        <p>Em 2022, a empresa “Sucesso”, focada em tecnologia em São Paulo, evitou um grande prejuízo. Um pequeno curto-circuito gerou um incêndio no servidor. Graças à manutenção de extintores feita pela RDR Extintores, o extintor funcionou perfeitamente. O fogo foi apagado em minutos, sem grandes perdas. A empresa demonstrou crescimento excepcional no setor de tecnologia, em parte pela segurança de suas operações.</p>
+        <p>Esse caso mostra como a prevenção e a manutenção correta salvam não só patrimônio, mas o futuro de um negócio. A segurança é pilar do crescimento sustentável.</p>
+
+        <h2>Como Escolher a Melhor Empresa</h2>
+        <ul>
+          <li><strong>Registro no INMETRO/SBAC:</strong> peça o certificado.</li>
+          <li><strong>Profissionais qualificados:</strong> experiência e treinamento.</li>
+          <li><strong>Peças e equipamentos de qualidade</strong> e calibrados.</li>
+          <li><strong>Garantia e suporte</strong> pós-serviço.</li>
+          <li><strong>Reputação</strong> (avaliações e depoimentos).</li>
+        </ul>
+
+        <h2>Perguntas Frequentes (FAQ)</h2>
+        <details>
+          <summary><strong>Qual a validade de um extintor de incêndio?</strong></summary>
+          <div class="mt-2">
+            <p>O agente extintor possui validade própria. Já o cilindro, com manutenção de nível 3 e teste hidrostático, segue ciclo de até 5 anos entre revisões profundas.</p>
+          </div>
+        </details>
+        <details>
+          <summary><strong>O que acontece se eu não fizer a manutenção?</strong></summary>
+          <div class="mt-2">
+            <p>Há risco de multas e, principalmente, de falha em emergência, colocando vidas e bens em perigo.</p>
+          </div>
+        </details>
+        <details>
+          <summary><strong>Posso fazer manutenção em casa?</strong></summary>
+          <div class="mt-2">
+            <p>Não. A manutenção deve ser feita por empresa especializada com registro no INMETRO/SBAC.</p>
+          </div>
+        </details>
+        <details>
+          <summary><strong>Qual a diferença entre recarga e manutenção?</strong></summary>
+          <div class="mt-2">
+            <p>A recarga substitui o agente extintor; a manutenção é mais ampla, incluindo inspeção, testes, reparos e a própria recarga.</p>
+          </div>
+        </details>
+        <details>
+          <summary><strong>Extintor vencido ainda funciona?</strong></summary>
+          <div class="mt-2">
+            <p>Pode até funcionar, mas sem garantia. Faça a manutenção no prazo para assegurar desempenho.</p>
+          </div>
+        </details>
+
+        <h2>Conclusão: Invista na sua Segurança</h2>
+        <p>A manutenção de extintores é mais do que uma exigência legal — é um investimento na sua segurança e na proteção do patrimônio. Extintores em dia podem ser a diferença entre um susto e uma tragédia.</p>
+
+        <div class="mt-6 p-5 rounded-2xl border border-slate-200 shadow-soft">
+          <h3 class="font-bold text-lg mb-1">Precisa de Manutenção de Extintores? Fale com a RDR!</h3>
+          <p class="text-slate-600">Atendimento rápido, equipe certificada e total conformidade técnica.</p>
+          <div class="mt-3 flex flex-wrap gap-2">
+            <a href="https://wa.me/5521999999999" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Fale no WhatsApp</a>
+            <a href="/servicos.html" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Ver todos os serviços</a>
+          </div>
+          <ul class="mt-3 text-sm text-slate-600 list-disc pl-5">
+            <li><a class="underline hover:text-red-600" href="/servico/avcb-ppci.html">Serviços de AVCB e PPCI</a></li>
+            <li><a class="underline hover:text-red-600" href="/servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a></li>
+            <li><a class="underline hover:text-red-600" href="/servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a></li>
+            <li><a class="underline hover:text-red-600" href="/servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a></li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:col-span-4">
+        <!-- TOC -->
+        <div class="rounded-2xl border border-slate-200 p-5 shadow-soft mb-6">
+          <h3 class="font-semibold mb-2">Neste artigo</h3>
+          <nav class="toc text-sm text-slate-700">
+            <a href="#top">Resumo rápido</a>
+            <a href="#top">Por que é importante</a>
+            <a href="#top">Quem pode fazer</a>
+            <a href="#top">Níveis 1, 2 e 3</a>
+            <a href="#top">Quando fazer</a>
+            <a href="#top">FAQ</a>
+          </nav>
+        </div>
+
+        <!-- Leia também -->
+        <div class="rounded-2xl border border-slate-200 p-5 shadow-soft">
+          <h3 class="font-semibold mb-3">Leia também</h3>
+          <ul class="space-y-3 text-sm">
+            <li><a class="block hover:text-red-600" href="/blog/validade-do-extintor.html">Validade do Extintor: Como Saber se Está Vencido</a></li>
+            <li><a class="block hover:text-red-600" href="/blog/diferenca-entre-extintor-abc-e-bc.html">Diferença entre o Extintor ABC e BC</a></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- FOOTER (igual ao restante do site) -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g2)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-slate-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 99999-9999</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="mx-auto container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

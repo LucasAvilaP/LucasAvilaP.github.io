@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Empresa | FENIX EXTINTORES</title>
+  <meta name="description" content="Desde 2010, soluções completas em prevenção e combate a incêndio no RJ: projetos AVCB/PPCI, manutenção e recarga de extintores, brigada, sinalização e teste hidrostático." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px}
+    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.07)}
+    .img-ph{background:repeating-linear-gradient(45deg,#f3f4f6,#f3f4f6 10px,#e5e7eb 10px,#e5e7eb 20px)}
+    .grid-3{display:grid;gap:1rem}
+    @media(min-width:768px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+  </style>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"FENIX EXTINTORES",
+    "url":"https://www.seu-dominio.com/sobre.html",
+    "logo":"https://www.seu-dominio.com/assets/logo.svg",
+    "telephone":"+55 21 95953-2161",
+    "foundingDate":"2010-02",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Rua Marina, 104 — Bento Ribeiro",
+      "addressLocality":"Rio de Janeiro",
+      "addressRegion":"RJ",
+      "postalCode":"21331-070",
+      "addressCountry":"BR"
+    },
+    "sameAs":[
+      "https://wa.me/5521959532161"
+    ],
+    "knowsAbout":[
+      "AVCB","PPCI","Extintores","Teste hidrostático",
+      "Sinalização de rota de fuga","Brigada de incêndio"
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- HEADER (igual às demais páginas, com 'ponte' no dropdown) -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" viewBox="0 0 64 64" aria-label="Logo">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="hover:text-red-600">HOME</a>
+
+        <!-- Grupo com ponte -->
+        <div class="relative group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+
+          <!-- Ponte invisível para hover -->
+          <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
+                      invisible opacity-0 translate-y-1 transition-all duration-150
+                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                      group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+            <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="hover:text-red-600">BLOG</a>
+        <a href="/sobre.html" class="text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <!-- CTA WhatsApp -->
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-red-50 to-white">
+    <div class="mx-auto container-max px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
+          <ol class="inline-flex items-center gap-2">
+            <li><a class="hover:text-red-600" href="/">Início</a></li>
+            <li>/</li>
+            <li class="text-slate-700">Empresa</li>
+          </ol>
+        </nav>
+        <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">Quem somos</h1>
+        <p class="text-lg text-slate-600 mb-6">
+          Desde 2010, entregamos soluções completas e personalizadas em segurança contra incêndio no Rio de Janeiro —
+          com engenharia aplicada, atendimento ágil e foco total em conformidade.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#servicos" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Nossos serviços</a>
+          <a href="/contato.html" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Fale com um especialista</a>
+        </div>
+      </div>
+      <div class="rounded-2xl overflow-hidden shadow-soft img-ph aspect-video" role="img" aria-label="Time técnico e operação de campo"><img src="/assets/recargas-de-extintor-de-incendio.jpg" alt=""></div>
+    </div>
+  </section>
+
+  <!-- NÚMEROS/PROVAS SOCIAIS -->
+  <section class="mx-auto container-max px-4 py-10">
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="rounded-2xl border border-slate-200 p-6 text-center shadow-soft">
+        <div class="text-3xl font-extrabold text-red-600">15+</div>
+        <p class="text-slate-600 mt-1">anos de atuação</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 text-center shadow-soft">
+        <div class="text-3xl font-extrabold text-red-600">1.200+</div>
+        <p class="text-slate-600 mt-1">clientes atendidos</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 text-center shadow-soft">
+        <div class="text-3xl font-extrabold text-red-600">4.000+</div>
+        <p class="text-slate-600 mt-1">equipamentos mantidos</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 text-center shadow-soft">
+        <div class="text-3xl font-extrabold text-red-600">100%</div>
+        <p class="text-slate-600 mt-1">foco em conformidade</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE / PROPÓSITO -->
+  <section class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto container-max px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <article>
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-4">Nossa essência</h2>
+        <p class="text-slate-700 leading-7">
+          Nascemos com a missão de proteger pessoas e patrimônios. Atendemos condomínios, comércios, indústrias,
+          hotéis, construtoras e empresas de todos os portes, combinando responsabilidade, seriedade e alto padrão técnico.
+          Construímos relações duradouras e transparentes, com suporte rápido e claro em todas as etapas.
+        </p>
+        <p class="text-slate-700 leading-7 mt-4">
+          Trabalhamos alinhados às normas do Corpo de Bombeiros, ABNT e INMETRO — da engenharia ao campo — para que
+          cada entrega resulte em <strong>segurança real</strong> e <strong>documentação em dia</strong>.
+        </p>
+      </article>
+      <aside class="rounded-2xl bg-white border border-slate-200 p-6 shadow-soft">
+        <h3 class="text-lg font-bold mb-3">Diferenciais</h3>
+        <ul class="space-y-2 text-slate-700">
+          <li>✔️ Atendimento 360º: projeto, execução, manutenção e laudos.</li>
+          <li>✔️ Rigor técnico: conformidade ABNT/INMETRO/CBMERJ.</li>
+          <li>✔️ Agilidade com previsibilidade de prazos.</li>
+          <li>✔️ Relatórios e registros fotográficos de todas as etapas.</li>
+          <li>✔️ Equipe qualificada e treinada continuamente.</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-2">O que fazemos</h2>
+    <p class="text-slate-600 mb-8">Portfólio completo para prevenção e combate a incêndio.</p>
+
+    <div class="grid-3">
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Projetos Técnicos (AVCB/PPCI)</h3>
+        <p class="text-slate-700">Levantamento, dimensionamento, ART e acompanhamento até a emissão.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Extintores e Sistemas</h3>
+        <p class="text-slate-700">Instalação, manutenção e recarga de extintores. Hidrantes, iluminação e detecção.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Sinalização de Rotas</h3>
+        <p class="text-slate-700">Projeto e implantação conforme NBR 13434, inclusive fotoluminescente.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Teste Hidrostático</h3>
+        <p class="text-slate-700">Ensaios em cilindros e mangueiras com emissão de laudos e rastreabilidade.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Brigada de Incêndio</h3>
+        <p class="text-slate-700">Dimensionamento, formação, reciclagem e simulados práticos.</p>
+      </div>
+      <div class="rounded-2xl border border-slate-200 p-6 shadow-soft">
+        <h3 class="font-semibold text-lg mb-2">Consultoria & Vistorias</h3>
+        <p class="text-slate-700">Auditorias técnicas, adequações e suporte em processos junto ao CBMERJ.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFORMIDADE & CERTIFICAÇÕES -->
+  <section class="bg-white">
+    <div class="mx-auto container-max px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-3">Conformidade que inspira confiança</h2>
+        <p class="text-slate-700 leading-7">
+          Operamos segundo as referências normativas aplicáveis (ABNT/NBR, INMETRO e diretrizes do Corpo de Bombeiros).
+          Equipamentos e insumos têm procedência controlada e os serviços são documentados com laudos e ART quando exigido.
+        </p>
+        <ul class="mt-4 space-y-2 text-slate-700">
+          <li>• NBR 13434 — Sinalização de segurança contra incêndio</li>
+          <li>• NBR 12962 / NBR 11861 — Mangueiras de incêndio (ensaios e manutenção)</li>
+          <li>• Ensaios hidrostáticos e manutenção conforme requisitos INMETRO/ABNT</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 shadow-soft">
+        <h3 class="text-lg font-bold mb-3">Segmentos que atendemos</h3>
+        <div class="grid grid-cols-2 gap-3 text-slate-700">
+          <span>🏢 Condomínios</span>
+          <span>🏬 Varejo</span>
+          <span>🏨 Hotéis</span>
+          <span>🏭 Indústrias</span>
+          <span>🏗️ Construtoras</span>
+          <span>🏫 Educação</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MISSÃO / VISÃO / VALORES -->
+  <section class="bg-slate-50 border-y border-slate-200">
+    <div class="mx-auto container-max px-4 py-14">
+      <h2 class="text-2xl md:text-3xl font-extrabold mb-8">Nosso norte</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-soft">
+          <h3 class="font-bold text-lg mb-2">Missão</h3>
+          <p class="text-slate-700">Proteger pessoas e patrimônios com soluções técnicas confiáveis, eficientes e em conformidade, promovendo segurança e tranquilidade.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-soft">
+          <h3 class="font-bold text-lg mb-2">Visão</h3>
+          <p class="text-slate-700">Ser referência em segurança contra incêndios no RJ, reconhecida pela seriedade, inovação e confiabilidade.</p>
+        </div>
+        <div class="rounded-2xl bg-white border border-slate-200 p-6 shadow-soft">
+          <h3 class="font-bold text-lg mb-2">Valores</h3>
+          <ul class="text-slate-700 space-y-1">
+            <li>• Segurança como prioridade</li>
+            <li>• Excelência técnica</li>
+            <li>• Inovação contínua</li>
+            <li>• Atendimento humanizado</li>
+            <li>• Ética e responsabilidade</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LINHA DO TEMPO -->
+  <section class="mx-auto container-max px-4 py-14">
+    <h2 class="text-2xl md:text-3xl font-extrabold mb-8">Nossa trajetória</h2>
+    <ol class="relative border-s-l border-slate-200 pl-6 space-y-8">
+      <li>
+        <div class="absolute -left-1 top-1.5 h-3 w-3 rounded-full bg-red-600"></div>
+        <h3 class="font-semibold">2010 — Fundação</h3>
+        <p class="text-slate-700">Início das operações no RJ com foco em manutenção e recarga de extintores.</p>
+      </li>
+      <li>
+        <div class="absolute -left-1 top-1.5 h-3 w-3 rounded-full bg-red-600"></div>
+        <h3 class="font-semibold">2014–2018 — Expansão</h3>
+        <p class="text-slate-700">Ampliação do portfólio: projetos técnicos, sinalização e brigada de incêndio.</p>
+      </li>
+      <li>
+        <div class="absolute -left-1 top-1.5 h-3 w-3 rounded-full bg-red-600"></div>
+        <h3 class="font-semibold">2019+ — Engenharia & Conformidade</h3>
+        <p class="text-slate-700">Padronização de processos, relatórios detalhados, rastreabilidade e prazos mais previsíveis.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ENDEREÇO & ATENDIMENTO -->
+  <section class="bg-white">
+    <div class="mx-auto container-max px-4 py-14 grid md:grid-cols-2 gap-10 items-start">
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 shadow-soft">
+        <h3 class="text-lg font-bold mb-3">Onde estamos</h3>
+        <p class="text-slate-700">
+          Rua Marina, 104 — Bento Ribeiro<br>
+          Rio de Janeiro/RJ — CEP 21331-070
+        </p>
+        <p class="text-slate-500 text-sm mt-2">
+          <a class="underline hover:text-red-600" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Rua%20Marina%2C%20104%20-%20Bento%20Ribeiro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021331-070">Ver no Google Maps</a>
+        </p>
+        <div class="mt-4 rounded-xl overflow-hidden border">
+          <iframe
+            src="https://www.google.com/maps?q=Rua%20Marina%2C%20104%20-%20Bento%20Ribeiro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2021331-070&hl=pt-BR&z=16&output=embed"
+            width="100%" height="260" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" title="Mapa — Rua Marina, 104 — Bento Ribeiro, RJ">
+          </iframe>
+        </div>
+      </div>
+      <div class="rounded-2xl bg-slate-50 border border-slate-200 p-6 shadow-soft">
+        <h3 class="text-lg font-bold mb-3">Como falar com a gente</h3>
+        <ul class="text-slate-700 space-y-2">
+          <li>💬 WhatsApp: <a class="text-emerald-700 font-semibold hover:underline" href="https://wa.me/5521959532161" target="_blank" rel="noopener">(21) 95953-2161</a></li>
+          <li>📞 Telefone: (21) 95953-2161</li>
+          <li>✉️ E-mail: <a class="hover:underline" href="mailto:contato@site-extintores.com.br">contato@site-extintores.com.br</a></li>
+          <li>🕘 Atendimento: Seg–Sex 08:00–18:00 • Sáb 08:00–12:00</li>
+        </ul>
+        <a href="/contato.html" class="inline-flex mt-5 items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold hover:bg-red-700">
+          Solicitar orçamento
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="mx-auto container-max px-4 pb-14">
+    <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-8 shadow-soft">
+      <div class="md:flex items-center justify-between gap-6">
+        <div class="md:max-w-xl">
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Pronto para colocar a sua empresa 100% em dia?</h3>
+          <p class="text-slate-600">Projetos, instalação, manutenção e laudos — tudo com um único parceiro técnico.</p>
+        </div>
+        <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold hover:bg-red-700 mt-4 md:mt-0">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (igual às outras páginas) -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g2)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-slate-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 95953-2161</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="mx-auto container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ano no footer
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

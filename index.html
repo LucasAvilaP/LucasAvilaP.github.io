@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FENIX EXTINTORES | Recarga de Extintores no RJ, Manutenção, Teste Hidrostático, Sinalização e AVCB/PPCI</title>
+  <meta name="description" content="FENIX EXTINTORES em Bento Ribeiro (RJ). Recarga e manutenção de extintores, teste hidrostático, sinalização fotoluminescente e projetos AVCB/PPCI. Orçamento rápido via WhatsApp." />
+  <link rel="canonical" href="https://www.seu-dominio.com/" />
+  <link rel="icon" href="/static/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Pré-carrega a imagem principal do herói para melhorar LCP -->
+  <link rel="preload" as="image" href="/assets/banner2.jpg" imagesrcset="/assets/banner2.jpg" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary:'#dc2626', primaryDark:'#b91c1c', dark:'#0f172a', brand:'#ef4444' },
+          boxShadow: { soft:'0 14px 34px rgba(0,0,0,.08)' },
+          maxWidth: { container:'1140px' }
+        }
+      }
+    }
+  </script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px;margin:0 auto}
+    .card{background:#fff;border:1px solid #e5e7eb;border-radius:1.25rem}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;padding:.9rem 1.2rem;border-radius:1rem;font-weight:700}
+    .btn-red{background:#dc2626;color:#fff}.btn-red:hover{background:#b91c1c}
+    .btn-ghost{background:#ffffff10;border:1px solid #ffffff30;color:#fff}.btn-ghost:hover{background:#ffffff20}
+    .chip{font-size:.75rem;padding:.25rem .6rem;border-radius:999px;background:#fef2f2;color:#991b1b;border:1px solid #fee2e2}
+    .fade-up{opacity:0;transform:translateY(18px);transition:all .6s ease}
+    .fade-up.visible{opacity:1;transform:translateY(0)}
+    .line-clamp-2{-webkit-line-clamp:2;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}
+    .line-clamp-3{-webkit-line-clamp:3;-webkit-box-orient:vertical;display:-webkit-box;overflow:hidden}
+    /* Dropdown com ponte */
+    .nav-group{position:relative}
+    .nav-bridge{position:absolute;left:0;top:100%;height:12px;width:21rem;z-index:10}
+    .dropdown{position:absolute;left:0;top:100%;width:21rem;border-radius:12px;padding:.5rem;background:#ef4444;color:#fff;box-shadow:0 10px 30px rgba(0,0,0,.15);opacity:0;visibility:hidden;transform:translateY(6px);transition:all .18s}
+    .nav-group:hover .dropdown,.nav-group:focus-within .dropdown{opacity:1;visibility:visible;transform:translateY(0)}
+    .dropdown a{display:block;padding:.85rem 1rem;border-radius:.75rem}
+    .dropdown a:hover{background:#dc2626}
+    /* Floating labels */
+    .fld{position:relative}
+    .fld input,.fld textarea,.fld select{width:100%;border:1px solid #e5e7eb;border-radius:14px;background:#fff;color:#0f172a;padding:1rem .9rem .9rem .9rem;height:3.4rem}
+    .fld textarea{min-height:9.5rem;height:auto}
+    .fld label{position:absolute;left:.9rem;top:.95rem;background:#fff;padding:0 .35rem;color:#64748b;border-radius:.35rem;pointer-events:none;transition:all .15s;font-size:.95rem}
+    .fld:focus-within label,.fld.filled label{top:-.6rem;font-size:.72rem;color:#dc2626}
+    .fld:focus-within input,.fld:focus-within textarea,.fld:focus-within select{outline:none;border-color:#dc2626;box-shadow:0 0 0 3px rgba(220,38,38,.16)}
+    /* States */
+    .is-invalid{border-color:#ef4444!important;box-shadow:0 0 0 3px rgba(239,68,68,.12)!important}
+    /* Carrossel */
+    .slider{scroll-snap-type:x mandatory;overflow:auto;display:flex;gap:1rem;padding-bottom:.25rem}
+    .slide{scroll-snap-align:start;min-width:320px}
+    /* Tabs */
+    .tab-btn{padding:.55rem .9rem;border-radius:.75rem;font-weight:600;border:1px solid #e5e7eb}
+    .tab-btn.active{background:#dc2626;color:#fff;border-color:#dc2626}
+    /* Toast */
+    .toast{position:fixed;right:1rem;bottom:1rem;background:#16a34a;color:#fff;padding:.9rem 1rem;border-radius:.9rem;box-shadow:0 10px 25px rgba(0,0,0,.15);transform:translateY(12px);opacity:0;pointer-events:none;transition:all .2s}
+    .toast.show{transform:translateY(0);opacity:1}
+    /* Top button + mobile bar */
+    .backtop{position:fixed;right:1rem;bottom:5.5rem;background:#111827;color:#fff;border-radius:999px;padding:.6rem .7rem;box-shadow:0 10px 25px rgba(0,0,0,.25);opacity:0;transform:translateY(10px);transition:all .2s}
+    .backtop.visible{opacity:1;transform:translateY(0)}
+    .mobile-cta{position:fixed;bottom:0;left:0;right:0;display:flex;gap:.6rem;background:#fff;border-top:1px solid #e5e7eb;padding:.6rem 1rem}
+    /* Chips translúcidos específicos do herói */
+    .chip-hero{
+      font-size:.75rem;padding:.25rem .6rem;border-radius:999px;
+      background:rgba(255,255,255,.12); color:#fff; border:1px solid rgba(255,255,255,.18);
+    }
+    /* Foco visível elegante em botões/links sobre o herói */
+    a.btn:focus-visible, button.btn:focus-visible{
+      outline:none; box-shadow:0 0 0 3px rgba(220,38,38,.35); border-radius:1rem;
+    }
+  </style>
+
+  <!-- JSON-LD LocalBusiness -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"FENIX EXTINTORES","image":"https://www.seu-dominio.com/static/og.jpg","telephone":"+55 21 9444-4172","email":"fenixextintoresltda@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Marina, 104 — Bento Ribeiro","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"21331-070","addressCountry":"BR"},"openingHours":["Mo-Fr 08:00-18:00","Sa 08:00-12:00"],"url":"https://www.seu-dominio.com","sameAs":["https://wa.me/552194444172"]}
+  </script>
+
+  <!-- JSON-LD FAQ -->
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"De quanto em quanto tempo preciso recarregar o extintor?","acceptedAnswer":{"@type":"Answer","text":"A cada 12 meses ou conforme indicação do fabricante/inspeção. Para CO₂, verificar peso/pressão regularmente."}},
+    {"@type":"Question","name":"Vocês retiram e entregam no local?","acceptedAnswer":{"@type":"Answer","text":"Sim. Oferecemos logística de retirada/entrega e opções de atendimento no local."}},
+    {"@type":"Question","name":"Atendem condomínios e comércios?","acceptedAnswer":{"@type":"Answer","text":"Sim. Planos para condomínio, comércio, indústria e eventos."}},
+    {"@type":"Question","name":"Emitimos ART/AVCB/PPCI?","acceptedAnswer":{"@type":"Answer","text":"Sim, com engenheiro responsável e documentação para regularização."}}
+  ]}
+  </script>
+</head>
+<body class="antialiased bg-gray-50 text-gray-800" id="topo">
+
+  <!-- Sprite do logo -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+    <symbol id="logo-fenix" viewBox="0 0 64 64">
+      <defs><linearGradient id="g1" x1="0" x2="1" y1="0" y2="1"><stop offset="0%" stop-color="#ef4444"/><stop offset="100%" stop-color="#b91c1c"/></linearGradient></defs>
+      <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+      <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+    </symbol>
+  </svg>
+
+  <!-- HEADER -->
+  <header class="w-full sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100">
+    <div class="container-max px-4 py-3 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" aria-label="Logo FENIX EXTINTORES"><use href="#logo-fenix"/></svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="text-red-600">HOME</a>
+
+        <div class="nav-group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-gray-100 flex items-center gap-2" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+          </button>
+          <div class="nav-bridge"></div>
+          <div class="dropdown">
+            <a href="/servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="hover:text-red-600">BLOG</a>
+        <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <a href="https://wa.me/5521959532161?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20extintores" target="_blank" class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="relative">
+    <!-- Foto principal: sem lazy, prioridade alta -->
+    <img
+      src="/assets/banner2.jpg"
+      alt="Profissional realizando manutenção em extintor"
+      class="absolute inset-0 w-full h-full object-cover object-[center_35%]"
+      fetchpriority="high" decoding="async">
+
+    <!-- Overlay escuro com degradê -->
+    <div class="absolute inset-0 pointer-events-none bg-gradient-to-b from-black/70 via-black/60 to-black/45"></div>
+
+    <div class="relative">
+      <div class="container-max px-4 py-16 md:py-24 min-h-[560px] md:min-h-[640px] grid md:grid-cols-2 gap-10 items-start text-white">
+        <!-- Lado esquerdo -->
+        <div class="fade-up">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="chip-hero">Atendimento RJ e Região</span>
+            <span class="chip-hero">Eng. Responsável</span>
+          </div>
+
+          <h1 class="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-[0_2px_10px_rgba(0,0,0,.5)]">
+            Recarga, Manutenção e <span class="inline-block border-b-4 border-red-500 pb-1">Projetos AVCB/PPCI</span>
+          </h1>
+
+          <p class="mt-4 text-lg/7 text-slate-200/95 max-w-2xl">
+            Teste hidrostático, sinalização fotoluminescente e documentação completa.
+            Agilidade, conformidade e suporte técnico em todas as etapas.
+          </p>
+
+          <div class="mt-7 flex flex-wrap gap-3">
+            <a href="#contato" class="btn btn-red shadow-soft">Pedir orçamento</a>
+            <a href="/servico/avcb-ppci.html" class="btn btn-ghost">Ver serviços</a>
+          </div>
+
+          <ul class="mt-6 grid sm:grid-cols-2 gap-3 text-sm">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+              Coleta e entrega no local
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+              Orçamento em minutos
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+              INMETRO & ABNT
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"/></svg>
+              ART e relatórios
+            </li>
+          </ul>
+        </div>
+
+        <!-- Form: destaque sutil -->
+        <div class="fade-up">
+          <div class="card p-6 md:p-7 shadow-soft ring-1 ring-black/5 backdrop-blur-sm">
+            <h3 class="font-bold text-lg text-gray-900">Solicite um orçamento</h3>
+            <p class="text-sm text-gray-600">Preencha e retornaremos rapidamente.</p>
+
+            <form id="formHero" action="https://formsubmit.co/fenixextintoresltda@gmail.com" method="POST" class="mt-4 grid gap-3">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_subject" value="Novo orçamento — site">
+              <input type="hidden" name="_next" value="https://www.seu-dominio.com/#sucesso">
+              <div class="grid md:grid-cols-2 gap-3">
+                <div class="fld"><input id="nome" name="nome" autocomplete="name" required placeholder=" "><label for="nome">Nome*</label></div>
+                <div class="fld"><input id="whatsapp" name="whatsapp" autocomplete="tel" required placeholder=" " inputmode="tel"><label for="whatsapp">WhatsApp*</label></div>
+              </div>
+              <div class="fld"><input id="cidade" name="cidade" autocomplete="address-level2" placeholder=" "><label for="cidade">Cidade/Região</label></div>
+              <div class="fld">
+                <select id="servico" name="servico" required autocomplete="off">
+                  <option value="">Selecione…</option>
+                  <option>Recarga de Extintores</option>
+                  <option>Manutenção</option>
+                  <option>Teste Hidrostático</option>
+                  <option>Sinalização</option>
+                  <option>AVCB/PPCI</option>
+                </select>
+                <label for="servico">Serviço de interesse*</label>
+              </div>
+              <div class="fld"><textarea id="mensagem" name="mensagem" placeholder=" " autocomplete="off"></textarea><label for="mensagem">Mensagem</label></div>
+
+              <div class="flex items-center gap-2 text-sm">
+                <input id="agree" required type="checkbox" class="rounded border-gray-300 text-red-600 focus:ring-red-600">
+                <label for="agree" class="text-gray-700">Concordo com o contato conforme a Política de Privacidade</label>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-3">
+                <button id="btnEnviar" type="submit" class="btn btn-red">
+                  <span id="btnTxt">Enviar</span>
+                  <svg id="btnLoad" class="hidden animate-spin h-5 w-5 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
+                </button>
+                <a id="btnZap" target="_blank" class="btn bg-emerald-600 text-white hover:bg-emerald-700">Falar no WhatsApp</a>
+              </div>
+              <p class="text-xs text-gray-500">Ao enviar, você concorda com nossa <a href="/contato.html#politica" class="underline">Política de Privacidade</a>.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Números (count-up) -->
+  <section class="py-10 bg-white border-y">
+    <div class="container-max px-4 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+      <div class="fade-up"><div class="text-4xl font-extrabold text-red-600"><span data-counter="15">0</span>+</div><p class="text-sm text-gray-600 mt-1">anos de atuação</p></div>
+      <div class="fade-up"><div class="text-4xl font-extrabold text-red-600"><span data-counter="1200">0</span>+</div><p class="text-sm text-gray-600 mt-1">clientes atendidos</p></div>
+      <div class="fade-up"><div class="text-4xl font-extrabold text-red-600"><span data-counter="5000">0</span>+</div><p class="text-sm text-gray-600 mt-1">extintores/ano</p></div>
+      <div class="fade-up"><div class="text-4xl font-extrabold text-red-600"><span data-counter="98">0</span>%</div><p class="text-sm text-gray-600 mt-1">satisfação (NPS)</p></div>
+    </div>
+  </section>
+
+  <!-- Tabs de Serviços -->
+  <section id="servicos" class="py-14">
+    <div class="container-max px-4">
+      <h2 class="text-3xl font-extrabold fade-up">Serviços</h2>
+      <p class="mt-2 text-gray-600 fade-up">Do projeto à manutenção, tudo em um só parceiro técnico.</p>
+
+      <div class="mt-5 flex flex-wrap gap-2">
+        <button class="tab-btn active" data-tab="avcb">AVCB & PPCI</button>
+        <button class="tab-btn" data-tab="brigada">Brigada de Incêndio</button>
+        <button class="tab-btn" data-tab="sinalizacao">Sinalização</button>
+        <button class="tab-btn" data-tab="hidro">Teste Hidrostático</button>
+      </div>
+
+      <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6" id="tabContent">
+        <!-- Cards são trocados via JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Como trabalhamos -->
+  <section class="py-14 bg-white">
+    <div class="container-max px-4">
+      <h2 class="text-3xl font-extrabold fade-up">Como trabalhamos</h2>
+      <div class="mt-8 grid md:grid-cols-4 gap-6">
+        <div class="card p-5 fade-up hover:shadow-soft transition">
+          <h4 class="font-semibold">1) Diagnóstico</h4>
+          <p class="text-sm text-gray-600 mt-1">Levantamento técnico, checklist e plano de ação.</p>
+        </div>
+        <div class="card p-5 fade-up hover:shadow-soft transition">
+          <h4 class="font-semibold">2) Coleta/Execução</h4>
+          <p class="text-sm text-gray-600 mt-1">Coleta e execução no local; itens de contingência quando necessário.</p>
+        </div>
+        <div class="card p-5 fade-up hover:shadow-soft transition">
+          <h4 class="font-semibold">3) Laudos & ART</h4>
+          <p class="text-sm text-gray-600 mt-1">Relatórios, etiquetas e rastreabilidade conforme ABNT/INMETRO.</p>
+        </div>
+        <div class="card p-5 fade-up hover:shadow-soft transition">
+          <h4 class="font-semibold">4) Entrega & Suporte</h4>
+          <p class="text-sm text-gray-600 mt-1">Reposição no layout, conferência final e orientação da equipe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Depoimentos (carrossel) -->
+  <section class="py-14">
+    <div class="container-max px-4">
+      <div class="md:flex items-end justify-between gap-6">
+        <div>
+          <h2 class="text-3xl font-extrabold fade-up">O que dizem nossos clientes</h2>
+          <p class="mt-2 text-gray-600 fade-up">Atendimento ágil, comunicação clara e conformidade.</p>
+        </div>
+      </div>
+      <div class="slider mt-6" id="slider">
+        <article class="card slide p-5 min-w-[320px] md:min-w-[420px]">
+          <p class="text-gray-700">“Precisávamos do AVCB com urgência. A FENIX organizou tudo: projeto, sinalização e extintores. Cumpriram o prazo.”</p>
+          <div class="mt-3 text-sm text-gray-500">Condomínio Vila Real • RJ</div>
+        </article>
+        <article class="card slide p-5 min-w-[320px] md:min-w-[420px]">
+          <p class="text-gray-700">“Coleta, recarga e entrega dos extintores no mesmo dia. Recebemos etiquetas e laudo completo.”</p>
+          <div class="mt-3 text-sm text-gray-500">Rede de Lojas Centro • RJ</div>
+        </article>
+        <article class="card slide p-5 min-w-[320px] md:min-w-[420px]">
+          <p class="text-gray-700">“Treinamento da brigada muito didático, com simulado. Equipe aprovou.”</p>
+          <div class="mt-3 text-sm text-gray-500">Indústria Zona Norte • RJ</div>
+        </article>
+      </div>
+      <div class="mt-4 flex items-center gap-2">
+        <button id="prev" class="rounded-lg border px-3 py-2 hover:bg-gray-100">←</button>
+        <button id="next" class="rounded-lg border px-3 py-2 hover:bg-gray-100">→</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog vitrine -->
+  <section class="py-14 bg-white">
+    <div class="container-max px-4">
+      <div class="md:flex items-end justify-between gap-6">
+        <div>
+          <h2 class="text-3xl font-extrabold fade-up">Blog & Dicas</h2>
+          <p class="mt-2 text-gray-600 fade-up">Conteúdo prático para o dia a dia.</p>
+        </div>
+        <a href="/blog/index.html" class="hidden md:inline-flex rounded-xl border px-4 py-2 font-semibold hover:border-red-500 hover:text-red-600">Ver todos</a>
+      </div>
+
+      <div class="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <article class="card overflow-hidden fade-up">
+          <a href="/blog/manutencao-de-extintores.html" class="block">
+            <img class="w-full h-44 object-cover" src="/assets/manutencao1.jpg" alt="Manutenção" loading="lazy">
+            <div class="p-5">
+              <span class="chip">Manutenção</span>
+              <h3 class="mt-2 font-bold text-lg line-clamp-2">Manutenção de Extintores: tudo o que você precisa saber</h3>
+              <p class="mt-2 text-gray-600 line-clamp-3">Quando fazer, etapas e boas práticas.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card overflow-hidden fade-up">
+          <a href="/blog/validade-do-extintor.html" class="block">
+            <img class="w-full h-44 object-cover" src="/assets/validade01.jpg" alt="Validade" loading="lazy">
+            <div class="p-5">
+              <span class="chip">Manutenção</span>
+              <h3 class="mt-2 font-bold text-lg line-clamp-2">Validade do Extintor: como saber se está vencido</h3>
+              <p class="mt-2 text-gray-600 line-clamp-3">Como verificar selo, prazos e retestes.</p>
+            </div>
+          </a>
+        </article>
+        <article class="card overflow-hidden fade-up">
+          <a href="/blog/diferenca-entre-extintor-abc-e-bc.html" class="block">
+            <img class="w-full h-44 object-cover" src="/assets/extintores-de-incendio.jpeg" alt="Diferença entre Extintor ABC e BC" loading="lazy">
+            <div class="p-5">
+              <span class="chip">Dicas</span>
+              <h3 class="mt-2 font-bold text-lg line-clamp-2">Diferença entre o Extintor ABC e BC</h3>
+              <p class="mt-2 text-gray-600 line-clamp-3">Entenda quando usar cada tipo e as classes de fogo.</p>
+            </div>
+          </a>
+        </article>
+      </div>
+
+      <div class="mt-6 md:hidden">
+        <a href="/blog/index.html" class="inline-flex rounded-xl border px-4 py-2 font-semibold hover:border-red-500 hover:text-red-600">Ver todos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contato -->
+  <section id="contato" class="py-16">
+    <div class="container-max px-4 grid md:grid-cols-2 gap-12 items-start">
+      <div class="fade-up">
+        <h2 class="text-3xl font-extrabold">Contato</h2>
+        <p class="mt-2 text-gray-600">Fale com nossa equipe e receba orçamento em minutos.</p>
+        <ul class="mt-6 space-y-2 text-sm">
+          <li><strong>WhatsApp:</strong> <a class="text-emerald-700 font-semibold" target="_blank" href="https://wa.me/5521959532161">(21) 95953-2161</a></li>
+          <li><strong>E-mail:</strong> <a class="text-red-600 font-semibold" href="mailto:fenixextintoresltda@gmail.com">fenixextintoresltda@gmail.com</a></li>
+          <li><strong>Endereço:</strong> Rua Marina, 104 — Bento Ribeiro, Rio de Janeiro/RJ — CEP 21331-070</li>
+          <li><strong>Horário:</strong> Seg. a Sex. 8h às 18h | Sáb. 8h às 12h</li>
+          <li><strong>CNPJ:</strong> 62.491.953/0001-57</li>
+        </ul>
+      </div>
+      <div class="card p-6 fade-up">
+        <h3 class="font-bold text-lg">Solicitar orçamento</h3>
+        <form id="formContato" action="https://formsubmit.co/fenixextintoresltda@gmail.com" method="POST" class="mt-4 grid gap-3">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="Contato — site">
+          <input type="hidden" name="_next" value="https://www.seu-dominio.com/#sucesso">
+
+          <div class="fld"><input name="nome" autocomplete="name" required placeholder=" "><label>Nome*</label></div>
+          <div class="fld"><input name="email" type="email" autocomplete="email" required placeholder=" "><label>E-mail*</label></div>
+          <div class="fld"><input name="telefone" id="tel2" autocomplete="tel" placeholder=" " inputmode="tel"><label>Telefone/WhatsApp</label></div>
+          <div class="fld"><input name="assunto" placeholder=" " autocomplete="off"><label>Assunto</label></div>
+          <div class="fld"><textarea name="mensagem" placeholder=" " autocomplete="off"></textarea><label>Mensagem</label></div>
+
+          <button id="btnEnviar2" type="submit" class="btn btn-red">
+            <span id="btnTxt2">Enviar</span>
+            <svg id="btnLoad2" class="hidden animate-spin h-5 w-5 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="container-max px-4 pb-16">
+    <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-8 shadow-soft">
+      <div class="md:flex items-center justify-between gap-6">
+        <div class="md:max-w-xl">
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Pronto para deixar tudo 100% em dia?</h3>
+          <p class="text-gray-600">Projetos, manutenção e laudos com um único parceiro técnico.</p>
+        </div>
+        <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold hover:bg-red-700 mt-4 md:mt-0">
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300">
+    <div class="container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" aria-hidden="true"><use href="#logo-fenix"/></svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-gray-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 95953-2161</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-800">
+      <div class="container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-gray-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. CNPJ 62.491.953/0001-57. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Barra mobile CTA -->
+  <div class="mobile-cta md:hidden">
+    <a href="https://wa.me/5521959532161" class="flex-1 inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white font-semibold py-3">WhatsApp</a>
+    <a href="#contato" class="flex-1 inline-flex items-center justify-center rounded-xl bg-red-600 text-white font-semibold py-3">Orçamento</a>
+  </div>
+
+  <!-- Botão voltar ao topo -->
+  <button id="backtop" class="backtop" aria-label="Voltar ao topo">↑</button>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">Formulário enviado! Vamos falar com você em instantes.</div>
+
+  <!-- WhatsApp flutuante (desktop) -->
+  <a href="https://wa.me/5521959532161?text=Ol%C3%A1%2C%20gostaria%20de%20um%20or%C3%A7amento%20de%20extintores" target="_blank" class="hidden md:flex fixed bottom-5 right-5 rounded-full p-4 bg-emerald-600 text-white shadow-lg hover:bg-emerald-700" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 h-6 fill-current"><path d="M20.52 3.48A11.89 11.89 0 0 0 12.06 0C5.52 0 .2 5.3.2 11.86c0 2.09.54 4.13 1.57 5.94L0 24l6.36-1.67a11.76 11.76 0 0 0 5.7 1.46h.01c6.54 0 11.86-5.31 11.86-11.86 0-3.17-1.24-6.15-3.41-8.45ZM12.06 21.3h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.77 1 .99-3.68-.22-.37a9.38 9.38 0 0 1-1.43-4.97C2.46 6.67 6.67 2.46 12.06 2.46c2.45 0 4.76.95 6.49 2.66a9.1 9.1 0 0 1 2.67 6.48c0 5.4-4.4 9.7-9.16 9.7Zm5.03-7.23c-.27-.14-1.57-.77-1.81-.86-.24-.09-.42-.14-.6.14-.18.27-.69.86-.85 1.03-.16.18-.31.2-.58.07-.27-.13-1.15-.42-2.19-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.45-.83-1.98-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47 .07-.72 .34-.24 .27-.95 .93-.95 2.25 0 1.32 .97 2.59 1.1 2.77 .14 .18 1.9 2.9 4.6 4.05 .64 .28 1.14 .45 1.53 .57 .64 .2 1.22 .17 1.68 .1 .51-.08 1.57-.64 1.79-1.27 .22-.63 .22-1.16 .15-1.27 -.06-.11 -.23 -.18 -.5 -.32Z"/></svg>
+  </a>
+
+  <script>
+    // Visuais on-scroll
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});
+    document.querySelectorAll('.fade-up').forEach(el=>io.observe(el));
+
+    // Ano footer
+    document.getElementById('ano').textContent=new Date().getFullYear();
+
+    // Floating label: marca .filled quando tem valor (para Safari)
+    document.querySelectorAll('.fld input,.fld textarea,.fld select').forEach(el=>{
+      const wrap=el.parentElement;
+      const toggle=()=>wrap.classList[el.value.trim()?'add':'remove']('filled');
+      el.addEventListener('input',toggle); el.addEventListener('blur',toggle); toggle();
+    });
+
+    // Máscara simples WhatsApp
+    const maskPhone = v => v.replace(/\D/g,'').replace(/^(\d{2})(\d)/,'($1) $2').replace(/(\d{5})(\d{4})$/,'$1-$2').slice(0,16);
+    const w1=document.getElementById('whatsapp'); if(w1){ w1.addEventListener('input',e=>e.target.value=maskPhone(e.target.value)); }
+    const tel2=document.getElementById('tel2'); if(tel2){ tel2.addEventListener('input',e=>e.target.value=maskPhone(e.target.value)); }
+
+    // Botão WhatsApp do form hero com mensagem montada
+    const btnZap=document.getElementById('btnZap');
+    const nomeEl=document.getElementById('nome'), cidadeEl=document.getElementById('cidade'), servEl=document.getElementById('servico'), msgEl=document.getElementById('mensagem');
+    function buildZap(){
+      const nome=encodeURIComponent(nomeEl?.value||'');
+      const cid=encodeURIComponent(cidadeEl?.value||'');
+      const serv=encodeURIComponent(servEl?.value||'');
+      const msg=encodeURIComponent(msgEl?.value||'');
+      const texto=`Ol%C3%A1!%20Sou%20${nome}.%20Interesse:%20${serv}.%20Cidade:%20${cid}.%20Mensagem:%20${msg}`;
+      btnZap.href=`https://wa.me/5521959532161?text=${texto}`;
+    }
+    [nomeEl,cidadeEl,servEl,msgEl].forEach(el=>el&&el.addEventListener('input',buildZap)); buildZap();
+
+    // Botões Enviar com loading + toast (quando voltar com #sucesso)
+    function bindForm(formId,btnId,txtId,loadId){
+      const form=document.getElementById(formId);
+      const btn=document.getElementById(btnId);
+      const txt=document.getElementById(txtId);
+      const load=document.getElementById(loadId);
+      if(!form) return;
+      form.addEventListener('submit',()=>{ if(btn&&txt&&load){ txt.classList.add('hidden'); load.classList.remove('hidden'); } });
+    }
+    bindForm('formHero','btnEnviar','btnTxt','btnLoad');
+    bindForm('formContato','btnEnviar2','btnTxt2','btnLoad2');
+
+    // Toast success
+    if(location.hash==='#sucesso'){ const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),4000); }
+
+    // Back to top
+    const back=document.getElementById('backtop');
+    window.addEventListener('scroll',()=>{ if(window.scrollY>500) back.classList.add('visible'); else back.classList.remove('visible'); });
+    back.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+
+    // Contadores (count-up)
+    const counters=[...document.querySelectorAll('[data-counter]')];
+    const io2=new IntersectionObserver(es=>es.forEach(e=>{
+      if(e.isIntersecting){ const el=e.target; const target=+el.dataset.counter; let n=0; const step=Math.max(1,Math.round(target/60));
+        const int=setInterval(()=>{ n+=step; if(n>=target){ n=target; clearInterval(int); } el.textContent=n; },18);
+        io2.unobserve(el);
+      }
+    }),{threshold:.6});
+    counters.forEach(c=>io2.observe(c));
+
+    // Carrossel depoimentos
+    const slider=document.getElementById('slider'); let auto=setInterval(()=>slider.scrollBy({left:400,behavior:'smooth'}),4000);
+    document.getElementById('next').onclick=()=>slider.scrollBy({left:400,behavior:'smooth'});
+    document.getElementById('prev').onclick=()=>slider.scrollBy({left:-400,behavior:'smooth'});
+    slider.addEventListener('mouseenter',()=>clearInterval(auto));
+    slider.addEventListener('mouseleave',()=>auto=setInterval(()=>slider.scrollBy({left:400,behavior:'smooth'}),4000));
+
+    // Tabs serviços (conteúdo em JS para interação rápida)
+    const cards = {
+      avcb: [
+        {href:'/servico/avcb-ppci.html',img:'/assets/ppci.png',title:'Projeto AVCB & PPCI',desc:'Projeto técnico, ART e regularização no CBMERJ.'},
+        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/rota-fulga.jfif',title:'Sinalização conforme NBR',desc:'Layout, instalação e placas fotoluminescentes.'},
+        {href:'/servico/teste-hidrostatico.html',img:'/assets/laudo2.jpg',title:'Laudos & Ensaios',desc:'Relatórios, etiquetas e rastreabilidade.'},
+      ],
+      brigada: [
+        {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada1.jpg',title:'Treinamento da Brigada',desc:'Formação, simulados e certificação.'},
+        {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada2.jpg',title:'Dimensionamento',desc:'Plano de brigada, mapas e POPs.'},
+        {href:'/servico/brigada-de-incendio.html',img:'/assets/card-brigada3.jpg',title:'Inspeções Periódicas',desc:'Rondas, checklists e relatórios.'},
+      ],
+      sinalizacao: [
+        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao1.jpg',title:'Placas Fotoluminescentes',desc:'Conforme NBR 13434 e ITs do Corpo de Bombeiros.'},
+        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao2.jpg',title:'Mapas e Rotas de Fuga',desc:'Layout de rotas com altura, setas e fluxos.'},
+        {href:'/servico/sinalizacao-rota-de-fuga.html',img:'/assets/sinalizacao3.jpg',title:'Luzes de Emergência',desc:'Instalação e testes de autonomia.'},
+      ],
+      hidro: [
+        {href:'/servico/teste-hidrostatico.html',img:'/assets/teste01.jpg',title:'Teste Hidrostático',desc:'Ensaios em cilindros e mangueiras.'},
+        {href:'/servico/teste-hidrostatico.html',img:'/assets/teste02.jpg',title:'Recarga Certificada',desc:'Selo, lacre e etiqueta com validade.'},
+        {href:'/servico/teste-hidrostatico.html',img:'/assets/teste03.jpg',title:'Manutenção de Extintores',desc:'Inspeção N1, N2 e N3 conforme norma.'},
+      ]
+    };
+    const grid=document
+    .getElementById('tabContent');
+    function renderTab(key){
+      grid.innerHTML = cards[key].map(c=>`
+        <a href="${c.href}" class="card hover:shadow-soft transition overflow-hidden">
+          <img src="${c.img}" alt="${c.title}" class="w-full h-40 object-cover" loading="lazy">
+          <div class="p-5">
+            <h3 class="font-bold text-lg">${c.title}</h3>
+            <p class="mt-1 text-sm text-gray-600">${c.desc}</p>
+          </div>
+        </a>`).join('');
+    }
+    renderTab('avcb');
+    .querySelectorAll('.tab-btn').forEach(b=>b.addEventListener('click',()=>{
+      .querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+      b.classList.add('active'); renderTab(b.dataset.tab);
+    }));
+  </script>
+</body>
+</html>

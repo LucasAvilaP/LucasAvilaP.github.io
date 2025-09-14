@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Blog & Dicas | Site Extintores</title>
+  <meta name="description" content="Dicas, normas e boas práticas sobre extintores, brigada de incêndio, AVCB/PPCI, sinalização e testes hidrostáticos." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+    .container-max{max-width:1140px}
+    .shadow-soft{box-shadow:0 10px 25px rgba(0,0,0,.07)}
+    .card{border:1px solid #e5e7eb;border-radius:1rem;background:#fff}
+    .chip{font-size:.75rem;padding:.25rem .5rem;border-radius:999px;background:#eef2ff;color:#3730a3}
+    .btn-tab{padding:.5rem .9rem;border-radius:.75rem;font-weight:600}
+    .btn-tab.active{background:#ef4444;color:#fff}
+    .line-clamp-2{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+    .line-clamp-3{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+  </style>
+
+  <!-- JSON-LD: Blog + Trilhas -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Blog & Dicas — Site Extintores",
+    "url":"https://www.seu-dominio.com/blog/index.html",
+    "description":"Conteúdos sobre extintores, brigada de incêndio, AVCB/PPCI, sinalização e testes hidrostáticos."
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Início","item":"https://www.seu-dominio.com/"},
+      {"@type":"ListItem","position":2,"name":"Blog","item":"https://www.seu-dominio.com/blog/index.html"}
+    ]
+  }
+  </script>
+</head>
+<body class="bg-white text-slate-800">
+
+  <!-- HEADER/NAV (igual ao home/AVCB, com 'ponte' no dropdown) -->
+  <header class="sticky top-0 z-40 bg-white/90 backdrop-blur border-b border-slate-200">
+    <div class="mx-auto container-max px-4 py-3 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3">
+        <svg class="h-9 w-9" viewBox="0 0 64 64" aria-label="Logo">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g1)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <span class="font-extrabold text-xl tracking-tight">FENIX EXTINTORES</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+        <a href="/" class="hover:text-red-600">HOME</a>
+
+        <!-- Grupo com ponte -->
+        <div class="relative group">
+          <button class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
+            <span>SERVIÇOS</span>
+            <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
+            </svg>
+          </button>
+
+          <!-- Ponte -->
+          <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
+
+          <!-- Dropdown -->
+          <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
+                      invisible opacity-0 translate-y-1 transition-all duration-150
+                      group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
+                      group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+            <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Teste Hidrostático</a>
+          </div>
+        </div>
+
+        <a href="/blog/index.html" class="text-red-600">BLOG</a>
+        <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
+        <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
+      </nav>
+
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+         class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gradient-to-br from-red-50 to-white">
+    <div class="mx-auto container-max px-4 py-12 md:py-16">
+      <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
+        <ol class="inline-flex items-center gap-2">
+          <li><a class="hover:text-red-600" href="/">Início</a></li>
+          <li>/</li>
+          <li class="text-slate-700">Blog</li>
+        </ol>
+      </nav>
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h1 class="text-3xl md:text-5xl font-extrabold leading-tight mb-4">
+            Blog & <span class="text-red-600">Dicas</span> de Segurança Contra Incêndio
+          </h1>
+          <p class="text-lg text-slate-600">Conteúdos sobre manutenção de extintores, validade e diferenças entre tipos — práticos e diretos para o dia a dia.</p>
+          <div class="mt-6 flex flex-wrap gap-2">
+            <button class="btn-tab active" data-filter="*">Todos</button>
+            <button class="btn-tab" data-filter="Manutenção">Manutenção</button>
+            <button class="btn-tab" data-filter="Dicas">Dicas</button>
+          </div>
+        </div>
+        <div class="md:justify-self-end w-full">
+          <label class="relative block">
+            <input id="q" class="w-full md:w-[28rem] rounded-xl border border-slate-300 px-4 py-3 pl-11 focus:outline-none focus:ring-2 focus:ring-red-500"
+                   placeholder="Buscar por título, tema ou palavra-chave" />
+            <span class="absolute left-3 top-2.5 text-slate-400" aria-hidden="true">🔎</span>
+          </label>
+          <p class="text-xs text-slate-500 mt-2">Ex.: “validade do extintor”, “extintor ABC”, “manutenção”.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GRID DE POSTS (agora com 4 artigos) -->
+  <section class="mx-auto container-max px-4 py-10">
+    <div id="posts" class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+
+      <!-- 1) Manutenção de Extintores -->
+      <article class="card overflow-hidden" data-category="Manutenção" data-keywords="manutenção extintores recarga inspeção etiqueta laudo prazo">
+        <a href="/blog/manutencao-de-extintores.html" class="block">
+          <img class="w-full h-44 object-cover" src="/assets/manutencao1.jpg" alt="Manutenção de extintores">
+          <div class="p-5">
+            <span class="chip">Manutenção</span>
+            <h2 class="mt-2 font-bold text-lg line-clamp-2">Manutenção de Extintores: Tudo o que Você Precisa Saber</h2>
+            <p class="mt-2 text-slate-600 line-clamp-3">Quando fazer, etapas do processo e boas práticas para manter tudo em conformidade.</p>
+            <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+              <span>10 mar 2025 • 6 min</span>
+              <span class="hover:text-red-600">Ler mais →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 2) Validade do Extintor -->
+      <article class="card overflow-hidden" data-category="Manutenção" data-keywords="validade extintor selo inmetro etiqueta vencido reteste hidrostático prazo">
+        <a href="/blog/validade-do-extintor.html" class="block">
+          <img class="w-full h-44 object-cover" src="/assets/validade01.jpg" alt="Validade do extintor">
+          <div class="p-5">
+            <span class="chip">Manutenção</span>
+            <h2 class="mt-2 font-bold text-lg line-clamp-2">Validade do Extintor: Como Saber se Está Vencido</h2>
+            <p class="mt-2 text-slate-600 line-clamp-3">Como verificar selo, prazos e quando providenciar inspeções e retestes.</p>
+            <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+              <span>03 mar 2025 • 4 min</span>
+              <span class="hover:text-red-600">Ler mais →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 3) Diferença ABC x BC -->
+      <article class="card overflow-hidden" data-category="Dicas" data-keywords="extintor abc bc classes de fogo a b c pó químico co2 diferença uso">
+        <a href="/blog/diferenca-entre-extintor-abc-e-bc.html" class="block">
+          <img class="w-full h-44 object-cover" src="/assets/extintores-de-incendio.jpeg" alt="Extintor ABC vs BC">
+          <div class="p-5">
+            <span class="chip">Dicas</span>
+            <h2 class="mt-2 font-bold text-lg line-clamp-2">Diferença entre o Extintor ABC e BC</h2>
+            <p class="mt-2 text-slate-600 line-clamp-3">Entenda quando usar cada tipo e as classes de fogo atendidas.</p>
+            <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+              <span>24 fev 2025 • 5 min</span>
+              <span class="hover:text-red-600">Ler mais →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+      <!-- 4) Tipos de Extintores e Suas Funções -->
+      <article class="card overflow-hidden" data-category="Dicas" data-keywords="tipos de extintores funções classe a b c d co2 água espuma pó agentes limpos">
+        <a href="/blog/tipos-de-extintores-e-suas-funcoes.html" class="block">
+          <img class="w-full h-44 object-cover" src="/assets/tipos01.jpg" alt="Tipos de extintores e suas funções">
+          <div class="p-5">
+            <span class="chip">Dicas</span>
+            <h2 class="mt-2 font-bold text-lg line-clamp-2">Tipos de Extintores e Suas Funções</h2>
+            <p class="mt-2 text-slate-600 line-clamp-3">Guia prático: água, espuma, CO₂, pó químico, Classe D e agentes limpos — quando usar cada um.</p>
+            <div class="mt-4 flex items-center justify-between text-xs text-slate-500">
+              <span>10 mar 2025 • 8 min</span>
+              <span class="hover:text-red-600">Ler mais →</span>
+            </div>
+          </div>
+        </a>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CTA de captação (opcional) -->
+  <section class="mx-auto container-max px-4 pb-14">
+    <div class="rounded-2xl bg-white border border-slate-200 p-6 md:p-8 shadow-soft">
+      <div class="md:flex items-center justify-between gap-6">
+        <div class="md:max-w-xl">
+          <h3 class="text-xl md:text-2xl font-extrabold mb-2">Quer receber novas dicas por e-mail?</h3>
+          <p class="text-slate-600">Assine para ser avisado(a) quando publicarmos conteúdos sobre segurança contra incêndio.</p>
+        </div>
+        <form class="mt-4 md:mt-0 flex w-full md:w-auto gap-2">
+          <input type="email" required placeholder="seuemail@exemplo.com"
+                 class="w-full md:w-80 rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500">
+          <button class="rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700" type="submit">Assinar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER (igual ao home/AVCB) -->
+  <footer class="bg-slate-900 text-slate-300">
+    <div class="mx-auto container-max px-4 py-12 grid md:grid-cols-4 gap-8 text-sm">
+      <div class="md:col-span-2 flex items-center gap-3">
+        <svg class="h-8 w-8" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="g2" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0%" stop-color="#ef4444"/>
+              <stop offset="100%" stop-color="#b91c1c"/>
+            </linearGradient>
+          </defs>
+          <path d="M32 4l18 6v14c0 12.7-8.2 24.3-18 26C22.2 48.3 14 36.7 14 24V10l18-6z" fill="url(#g2)"/>
+          <path d="M32 20c4 4 2 8-2 10 6 0 10-4 10-10 0-5-4-8-8-10 1 3-2 5-4 8-2 3-1 7 4 8-6-2-8-8-4-12 3-3 7-4 12-2-3-5-10-6-14-2-6 6-2 16 6 18" fill="#fff" opacity=".9"/>
+        </svg>
+        <div>
+          <h4 class="text-white font-bold text-lg">FENIX EXTINTORES</h4>
+          <p class="mt-2 text-slate-400">Recarga de extintores, manutenção, teste hidrostático, sinalização e projetos AVCB/PPCI.</p>
+        </div>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Atendimento</h5>
+        <ul class="mt-2 space-y-1">
+          <li>Seg–Sex: 08:00–18:00</li>
+          <li>Sáb: 08:00–12:00</li>
+          <li>WhatsApp: (21) 95953-2161</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-white font-semibold">Links</h5>
+        <ul class="mt-2 space-y-1">
+          <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
+          <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
+          <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
+          <li><a href="/servico/teste-hidrostatico.html" class="hover:underline">Teste Hidrostático</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-slate-800">
+      <div class="mx-auto container-max px-4 py-5 flex flex-wrap items-center justify-between gap-4 text-xs text-slate-500">
+        <span>© <span id="ano"></span> FENIX EXTINTORES. Todos os direitos reservados.</span>
+        <span>Site desenvolvido por <a href="#" class="underline">AC Tech Leap</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Filtros e busca (client-side) -->
+  <script>
+    // Ano no footer
+    document.getElementById('ano').textContent = new Date().getFullYear();
+
+    // Filtro por categoria
+    const tabs = document.querySelectorAll('.btn-tab');
+    const posts = document.querySelectorAll('#posts article');
+    let currentFilter = '*';
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        currentFilter = tab.dataset.filter;
+        applyFilters();
+      });
+    });
+
+    // Busca por texto
+    const q = document.getElementById('q');
+    q.addEventListener('input', applyFilters);
+
+    function applyFilters(){
+      const term = q.value.trim().toLowerCase();
+      posts.forEach(card => {
+        const cat = card.dataset.category;
+        const keys = (card.dataset.keywords || '').toLowerCase();
+        const title = (card.querySelector('h2')?.textContent || '').toLowerCase();
+        const matchCat = (currentFilter === '*') || (cat === currentFilter);
+        const matchText = !term || keys.includes(term) || title.includes(term);
+        card.style.display = (matchCat && matchText) ? '' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
