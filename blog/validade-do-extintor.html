@@ -3,8 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Validade do Extintor: Como Saber se Está Vencido | Blog</title>
+  <title>Validade do Extintor: Como Saber se Está Vencido | Blog FENIX Extintores</title>
   <meta name="description" content="Guia prático para verificar a validade do extintor pelo selo do INMETRO, entender prazos de recarga e evitar multas e riscos." />
+  <link rel="canonical" href="https://www.seu-dominio.com/blog/validade-do-extintor.html">
+  <link rel="icon" href="/assets/logo.svg" type="image/svg+xml">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Validade do Extintor: Como Saber se Está Vencido">
+  <meta property="og:description" content="Veja como ler o selo do INMETRO, conferir prazos de recarga e manter o equipamento pronto para uso.">
+  <meta property="og:url" content="https://www.seu-dominio.com/blog/validade-do-extintor.html">
+  <meta property="og:image" content="https://www.seu-dominio.com/assets/Validade-do-Extintor.jpg">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -27,11 +35,12 @@
     "@context":"https://schema.org",
     "@type":"BlogPosting",
     "headline":"Validade do Extintor: Como Saber se Está Vencido",
-    "author":{"@type":"Organization","name":"RDR Extintores"},
+    "author":{"@type":"Organization","name":"FENIX Extintores"},
+    "publisher":{"@type":"Organization","name":"FENIX Extintores"},
     "datePublished":"2025-03-10",
     "dateModified":"2025-03-10",
     "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.seu-dominio.com/blog/validade-do-extintor.html"},
-    "image":"https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
+    "image":"https://www.seu-dominio.com/assets/Validade-do-Extintor.jpg",
     "description":"Como verificar a validade do extintor pelo selo do INMETRO, prazos de recarga, responsabilidades e FAQ."
   }
   </script>
@@ -57,7 +66,6 @@
 
       <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
         <a href="/" class="hover:text-red-600">HOME</a>
-
         <div class="relative group">
           <button class="relative z-20 px-3 py-2 rounded-md hover:bg-slate-100 flex items-center gap-2 text-red-600" aria-haspopup="true" aria-expanded="false">
             <span>SERVIÇOS</span>
@@ -65,9 +73,7 @@
               <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/>
             </svg>
           </button>
-          <!-- Ponte para o hover -->
           <div class="absolute left-0 top-full h-3 w-[21rem] z-10"></div>
-          <!-- Dropdown -->
           <div class="absolute left-0 top-full w-[21rem] rounded-xl p-2 bg-red-500 text-white shadow-lg z-30
                       invisible opacity-0 translate-y-1 transition-all duration-150
                       group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
@@ -78,18 +84,60 @@
             <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Teste Hidrostático</a>
           </div>
         </div>
-
         <a href="/blog/index.html" class="text-red-600">BLOG</a>
         <a href="/sobre.html" class="hover:text-red-600">EMPRESA</a>
         <a href="/contato.html" class="hover:text-red-600">CONTATO</a>
       </nav>
 
-      <a href="https://wa.me/5521999999999" target="_blank" rel="noopener"
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
          class="hidden sm:inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
         Orçamento no WhatsApp
       </a>
+
+      <!-- Hamburguer (mobile) -->
+      <button id="nav-toggle" aria-controls="mobile-menu" aria-expanded="false"
+              class="md:hidden inline-flex items-center justify-center rounded-lg p-2 border border-slate-200"
+              aria-label="Abrir menu">
+        <svg id="icon-open" class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        <svg id="icon-close" class="h-6 w-6 hidden" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
     </div>
   </header>
+
+  <!-- Drawer Mobile -->
+  <div id="mobile-menu" class="hidden fixed inset-0 z-50">
+    <div id="mobile-backdrop" class="absolute inset-0 bg-black/40"></div>
+    <aside class="absolute right-0 top-0 h-full w-[82%] max-w-sm bg-white shadow-xl p-5 overflow-y-auto">
+      <div class="flex items-center justify-between mb-4">
+        <span class="font-extrabold text-lg">FENIX EXTINTORES</span>
+        <button id="nav-close" class="inline-flex p-2 rounded-lg border border-slate-200" aria-label="Fechar menu">
+          <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M18 6l-12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+      <nav class="space-y-1 text-sm">
+        <a href="/" class="block px-3 py-2 rounded-lg hover:bg-slate-100">HOME</a>
+        <details class="group" open>
+          <summary class="px-3 py-2 rounded-lg hover:bg-slate-100 cursor-pointer flex items-center justify-between">
+            <span class="font-semibold text-red-600">SERVIÇOS</span>
+            <svg class="h-4 w-4 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
+          </summary>
+          <div class="mt-1 pl-3 space-y-1">
+            <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviços de AVCB e PPCI</a>
+            <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviços de Brigada de Incêndio</a>
+            <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Sinalização para Rota de Fuga</a>
+            <a href="/servico/teste-hidrostatico.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Teste Hidrostático</a>
+          </div>
+        </details>
+        <a href="/blog/index.html" class="block px-3 py-2 rounded-lg bg-red-50 text-red-700">BLOG</a>
+        <a href="/sobre.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">EMPRESA</a>
+        <a href="/contato.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">CONTATO</a>
+      </nav>
+      <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
+         class="mt-6 inline-flex w-full items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-2 font-semibold shadow-soft hover:bg-emerald-700">
+        Orçamento no WhatsApp
+      </a>
+    </aside>
+  </div>
 
   <!-- HERO / BREADCRUMB -->
   <section class="bg-gradient-to-br from-red-50 to-white">
@@ -117,7 +165,7 @@
           </div>
         </div>
         <div class="rounded-2xl overflow-hidden shadow-soft h-44 md:h-full">
-          <img src="/assets/Validade-do-Extintor.jpg" alt="Validade do extintor" class="w-full h-full object-cover">
+          <img src="/assets/Validade-do-Extintor.jpg" alt="Etiqueta de validade de extintor" class="w-full h-full object-cover" loading="lazy">
         </div>
       </div>
     </div>
@@ -128,83 +176,63 @@
     <div class="grid lg:grid-cols-12 gap-10">
       <!-- Artigo -->
       <article class="prose lg:col-span-8 text-slate-800">
-        <p>Saber a validade do extintor é muito importante para a segurança de todos e para evitar problemas. Este guia prático da RDR Extintores, com a experiência do nosso CEO, Gabriel, vai te mostrar como verificar a data de vencimento da carga do seu extintor de forma simples, sem complicação. Vamos aprender sobre o selo do INMETRO e o que ele significa, garantindo que seu equipamento esteja sempre pronto para usar, protegendo sua empresa e as pessoas.</p>
-
-        <p>Sabe aquela sensação de segurança? Ela vem quando sabemos que estamos prontos para qualquer coisa. E quando falamos de incêndios, ter um extintor funcionando é o básico. Mas, como saber se ele está mesmo em dia?</p>
-
-        <p>Conferir a validade do extintor pode parecer um bicho de sete cabeças, mas não é. Nós, da RDR Extintores, que trabalhamos com isso todo dia, vemos a importância de ter essa informação clara. Por isso, preparamos este guia.</p>
+        <p>“Validade do extintor” costuma gerar dúvida. Tecnicamente, quem vence é <strong>a carga</strong> (pó, água, CO₂), que precisa de <strong>recarga anual</strong> e manutenções periódicas. Manter tudo em dia evita falhas em emergência, autuações e problemas com AVCB/CLCB.</p>
 
         <div class="p-4 rounded-xl bg-amber-50 border border-amber-200">
-          <strong>Dica Essencial da RDR Extintores:</strong> A segurança da sua empresa e das pessoas que trabalham com você começa com a certeza de que todos os equipamentos de prevenção estão em dia. <u>Um extintor vencido não protege ninguém!</u>
+          <strong>Essencial:</strong> extintor com carga vencida pode não funcionar como esperado. Verifique o selo do INMETRO e siga os prazos.
         </div>
 
-        <h2><strong>Por Que É Tão Importante Conferir a Validade do Extintor?</strong></h2>
-        <p>Um extintor que não funciona é um problema enorme. Imagine que comece um incêndio pequeno no seu negócio. Você pega o extintor, e ele simplesmente não funciona porque a carga está vencida. O fogo pode virar um incêndio grande em segundos.</p>
-        <p>Além do perigo real, há também a questão das multas. O Corpo de Bombeiros faz vistorias e, se encontrar a carga vencida, sua empresa pode ser multada e até ter o alvará suspenso.</p>
+        <h2><strong>Onde ver a validade?</strong></h2>
+        <p>No <strong>selo do INMETRO</strong> colado no cilindro. Ele registra <em>mês</em> e <em>ano</em> da recarga realizada por empresa autorizada.</p>
 
-        <h2><strong>Atenção: A Carga Vence, o Extintor Não!</strong></h2>
-        <p>Muitas pessoas falam em “validade do extintor”. Na verdade, o que vence é <strong>a carga</strong> (pó químico, água, CO₂). O cilindro tem vida útil maior, mas precisa de recargas e manutenções periódicas.</p>
+        <h2><strong>Como ler o selo (passo a passo)</strong></h2>
+        <ol>
+          <li>Localize o selo do INMETRO no corpo do extintor.</li>
+          <li>Identifique quais <strong>mês</strong> e <strong>ano</strong> foram marcados/perfurados pela empresa de manutenção.</li>
+          <li>Some <strong>12 meses</strong> à data para obter a <strong>validade da carga</strong>. Ex.: recarga em nov/2024 → válida até nov/2025.</li>
+          <li>Se a data atual passou da validade, providencie <strong>recarga imediata</strong>.</li>
+        </ol>
 
-        <h1><strong>Como Iniciar: Conhecendo o Selo do INMETRO</strong></h1>
-        <p>Para verificar a validade, o primeiro passo é encontrar o <strong>selo do INMETRO</strong> colado no cilindro. O INMETRO (Instituto Nacional de Metrologia, Qualidade e Tecnologia) é quem certifica a qualidade das recargas no Brasil.</p>
-        <img src="/assets/Validade-de-Extintor.jpg" alt="imagem da validade no extintor">
-        <h2><strong>Decifrando o Selo do INMETRO: Meses e Anos</strong></h2>
-        <p>O selo possui pequenas partes destacáveis que indicam <strong>mês</strong> e <strong>ano</strong> da recarga. A validade da carga é de <strong>12 meses após a data marcada</strong>. As letras representam os meses (ex.: <em>NOV</em> para novembro) e os números, os anos.</p>
-        <p>Segundo o Dr. João Silva, engenheiro de segurança e professor da USP, “a manutenção preventiva de extintores é tão vital quanto o próprio extintor. A negligência pode custar vidas e bens”.</p>
+        <img src="/assets/Como-saber-a-data-de-validade-do-extintor-4.jpg" alt="Exemplo de selo com mês e ano perfurados" loading="lazy">
 
-        <h2><strong>Como Identificar a Data de Validade na Prática?</strong></h2>
-        <p>Procure no selo quais marcas de mês e ano foram perfuradas ou destacadas pela empresa de manutenção. <strong>Some 1 ano</strong> a essa data para obter a validade da carga. Exemplo: recarga em <strong>nov/2022</strong> → validade até <strong>nov/2023</strong>.</p>
-        <img src="/assets/Como-saber-a-data-de-validade-do-extintor-4.jpg" alt="">
-        <h2><strong>Estudo de Caso: A Importância da Validade</strong></h2>
-        <p>Em um caso recente, a empresa brasileira “Sucesso”, do setor de tecnologia, evitou um grande prejuízo graças à política rígida de verificação de validade. Um foco de incêndio foi controlado rapidamente em São Paulo, e parte do crescimento da empresa é atribuído à atenção com a segurança e manutenção em dia.</p>
+        <h2><strong>Manutenções e prazos usuais</strong></h2>
+        <ul>
+          <li><strong>Inspeção periódica (nível 1):</strong> checagem visual sem abrir o extintor (tipicamente semestral).</li>
+          <li><strong>Manutenção/recarga (nível 2):</strong> anual, em empresa certificada, com desmontagem e testes.</li>
+          <li><strong>Reteste hidrostático (nível 3):</strong> em geral a cada <strong>5 anos</strong>, para avaliar a resistência do cilindro.</li>
+        </ul>
+        <p><em>Observação:</em> prazos podem variar conforme norma aplicável e instruções do Corpo de Bombeiros local.</p>
 
-        <h2><strong>Manutenção e Recarga: Quem Pode Fazer?</strong></h2>
-        <p>Procure sempre <strong>empresas certificadas pelo INMETRO</strong>, como a RDR Extintores. Profissionais qualificados, procedimentos padronizados e equipamentos calibrados garantem um serviço confiável.</p>
-        <p>Dados de Corpos de Bombeiros estaduais indicam que diversas ocorrências poderiam ser controladas com equipamentos em dia — mais um motivo para checar a validade regularmente.</p>
+        <h2><strong>Quem pode recarregar?</strong></h2>
+        <p>Somente <strong>empresas certificadas</strong> (INMETRO/SBAC). Elas possuem equipe treinada, equipamentos calibrados e rastreabilidade de serviço.</p>
 
-        <h2><strong>Dúvidas Comuns (FAQ)</strong></h2>
+        <h2><strong>FAQ rápido</strong></h2>
         <details>
-          <summary><strong>1. O extintor vence mesmo?</strong></summary>
-          <div class="mt-2"><p>Não. O que vence é a <strong>carga</strong>, que precisa de recarga anual. O cilindro passa por manutenções e teste hidrostático a cada 5 anos.</p></div>
+          <summary><strong>O extintor “vence”?</strong></summary>
+          <div class="mt-2"><p>O cilindro tem longa vida útil com manutenções; <strong>a carga vence</strong> e deve ser recarregada anualmente.</p></div>
         </details>
         <details>
-          <summary><strong>2. Onde encontro a data de validade?</strong></summary>
-          <div class="mt-2"><p>No <strong>selo do INMETRO</strong> colado no corpo do extintor. A partir da data de recarga, a validade é de 12 meses.</p></div>
+          <summary><strong>Onde fica a data?</strong></summary>
+          <div class="mt-2"><p>No <strong>selo do INMETRO</strong> com mês/ano da recarga. A validade é de 12 meses após a data indicada.</p></div>
         </details>
         <details>
-          <summary><strong>3. Qual a vida útil de um extintor?</strong></summary>
-          <div class="mt-2"><p>Bem cuidado e com manutenções em dia, pode ultrapassar 20 anos. Atenção para recargas e testes periódicos.</p></div>
+          <summary><strong>Posso usar um extintor vencido?</strong></summary>
+          <div class="mt-2"><p>Não é recomendado: há risco de falha e de autuação em vistoria.</p></div>
         </details>
         <details>
-          <summary><strong>4. O que acontece se eu usar um extintor vencido?</strong></summary>
-          <div class="mt-2"><p>Pode falhar na hora da necessidade, além de gerar multas e impedir obtenção/renovação do AVCB.</p></div>
-        </details>
-        <details>
-          <summary><strong>5. Preciso ser técnico para verificar a validade?</strong></summary>
-          <div class="mt-2"><p>Não. Qualquer pessoa pode verificar o selo do INMETRO e conferir mês/ano da recarga.</p></div>
-        </details>
-        <details>
-          <summary><strong>6. A fiscalização dos Bombeiros verifica a validade?</strong></summary>
-          <div class="mt-2"><p>Sim. Extintores vencidos podem resultar em autuação e problemas com o AVCB.</p></div>
-        </details>
-        <details>
-          <summary><strong>7. O que é o teste hidrostático?</strong></summary>
-          <div class="mt-2"><p>Ensaio de pressão realizado, em geral, a cada 5 anos para avaliar a resistência do cilindro.</p></div>
-        </details>
-        <details>
-          <summary><strong>8. Onde recarregar meu extintor?</strong></summary>
-          <div class="mt-2"><p>Em empresa certificada pelo INMETRO. A RDR Extintores realiza recarga, manutenção e emissão de laudos.</p></div>
+          <summary><strong>O que é o teste hidrostático?</strong></summary>
+          <div class="mt-2"><p>Ensaio de pressão para verificar a integridade do cilindro, normalmente a cada 5 anos.</p></div>
         </details>
 
-        <h2><strong>Conclusão: Segurança É Prioridade</strong></h2>
-        <p>Entender a validade do extintor é básico e decisivo. Verificar o selo do INMETRO, cumprir prazos e manter a manutenção em dia evita acidentes, prejuízos e multas — protegendo vidas e patrimônio.</p>
+        <h2><strong>Conclusão</strong></h2>
+        <p>Verificar o selo do INMETRO e respeitar os prazos de recarga/inspeções garante desempenho, conformidade e segurança. Em caso de dúvida, peça orientação técnica.</p>
 
         <div class="mt-6 p-5 rounded-2xl border border-slate-200 shadow-soft">
-          <h3 class="font-bold text-lg mb-1">Proteja seu negócio com a RDR Extintores</h3>
-          <p class="text-slate-600">Recarga, manutenção e laudos — atendimento rápido por equipe certificada.</p>
+          <h3 class="font-bold text-lg mb-1">Precisa recarregar ou validar seus extintores?</h3>
+          <p class="text-slate-600">A FENIX Extintores atende com equipe certificada, recarga, manutenção e laudos.</p>
           <div class="mt-3 flex flex-wrap gap-2">
-            <a href="https://wa.me/5521999999999" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Solicitar Orçamento</a>
-            <a href="/servicos.html" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Ver serviços</a>
+            <a href="https://wa.me/5521959532161" target="_blank" rel="noopener" class="inline-flex items-center justify-center rounded-xl bg-red-600 text-white px-5 py-3 font-semibold shadow-soft hover:bg-red-700">Solicitar orçamento</a>
+            <a href="/contato.html" class="inline-flex items-center justify-center rounded-xl border border-slate-300 px-5 py-3 font-semibold hover:border-red-500 hover:text-red-600">Falar com um especialista</a>
           </div>
           <ul class="mt-3 text-sm text-slate-600 list-disc pl-5">
             <li><a class="underline hover:text-red-600" href="/servico/avcb-ppci.html">Serviços de AVCB e PPCI</a></li>
@@ -212,7 +240,6 @@
             <li><a class="underline hover:text-red-600" href="/servico/sinalizacao-rota-de-fuga.html">Sinalização para Rota de Fuga</a></li>
             <li><a class="underline hover:text-red-600" href="/servico/teste-hidrostatico.html">Teste Hidrostático</a></li>
           </ul>
-          <p class="mt-3 text-xs text-slate-500">Autor: Gabriel, CEO da RDR Extintores.</p>
         </div>
       </article>
 
@@ -253,7 +280,7 @@
         <ul class="mt-2 space-y-1">
           <li>Seg–Sex: 08:00–18:00</li>
           <li>Sáb: 08:00–12:00</li>
-          <li>WhatsApp: (21) 99999-9999</li>
+          <li>WhatsApp: (21) 95953-2161</li>
         </ul>
       </div>
       <div>
@@ -276,39 +303,39 @@
 
   <script>
     document.getElementById('ano').textContent = new Date().getFullYear();
-      // === Menu Mobile (drawer) ===
-(function(){
-  const toggle = document.getElementById('nav-toggle');
-  const closeBtn = document.getElementById('nav-close');
-  const menu = document.getElementById('mobile-menu');
-  const backdrop = document.getElementById('mobile-backdrop');
-  const iconOpen = document.getElementById('icon-open');
-  const iconClose = document.getElementById('icon-close');
 
-  if(!toggle || !menu) return;
+    // === Menu Mobile (drawer) ===
+    (function(){
+      const toggle = document.getElementById('nav-toggle');
+      const closeBtn = document.getElementById('nav-close');
+      const menu = document.getElementById('mobile-menu');
+      const backdrop = document.getElementById('mobile-backdrop');
+      const iconOpen = document.getElementById('icon-open');
+      const iconClose = document.getElementById('icon-close');
 
-  const open = () => {
-    menu.classList.remove('hidden');
-    document.body.classList.add('overflow-hidden');
-    toggle.setAttribute('aria-expanded','true');
-    iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
-  };
-  const close = () => {
-    menu.classList.add('hidden');
-    document.body.classList.remove('overflow-hidden');
-    toggle.setAttribute('aria-expanded','false');
-    iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
-  };
+      if(!toggle || !menu) return;
 
-  toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
-  closeBtn && closeBtn.addEventListener('click', close);
-  backdrop && backdrop.addEventListener('click', close);
-  // Fecha com ESC
-  window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
-  // Fecha ao clicar em um link do drawer
-  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
-})();
+      const open = () => {
+        menu.classList.remove('hidden');
+        document.body.classList.add('overflow-hidden');
+        toggle.setAttribute('aria-expanded','true');
+        iconOpen.classList.add('hidden'); iconClose.classList.remove('hidden');
+      };
+      const close = () => {
+        menu.classList.add('hidden');
+        document.body.classList.remove('overflow-hidden');
+        toggle.setAttribute('aria-expanded','false');
+        iconClose.classList.add('hidden'); iconOpen.classList.remove('hidden');
+      };
+
+      toggle.addEventListener('click', ()=> menu.classList.contains('hidden') ? open() : close());
+      closeBtn && closeBtn.addEventListener('click', close);
+      backdrop && backdrop.addEventListener('click', close);
+      // Fecha com ESC
+      window.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+      // Fecha ao clicar em um link do drawer
+      menu.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+    })();
   </script>
 </body>
 </html>
-    
