@@ -90,7 +90,7 @@
 
   <!-- JSON-LD LocalBusiness -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"LocalBusiness","name":"FENIX EXTINTORES","image":"https://www.seu-dominio.com/static/og.jpg","telephone":"+55 21 9444-4172","email":"fenixextintoresltda@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Marina, 104 — Bento Ribeiro","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"21331-070","addressCountry":"BR"},"openingHours":["Mo-Fr 08:00-18:00","Sa 08:00-12:00"],"url":"https://www.seu-dominio.com","sameAs":["https://wa.me/552194444172"]}
+  {"@context":"https://schema.org","@type":"LocalBusiness","name":"FENIX EXTINTORES","image":"https://www.seu-dominio.com/static/og.jpg","telephone":"+55 21 95953-2161","email":"fenixextintoresltda@gmail.com","address":{"@type":"PostalAddress","streetAddress":"Rua Marina, 104 — Bento Ribeiro","addressLocality":"Rio de Janeiro","addressRegion":"RJ","postalCode":"21331-070","addressCountry":"BR"},"openingHours":["Mo-Fr 08:00-18:00","Sa 08:00-12:00"],"url":"https://www.seu-dominio.com","sameAs":["https://wa.me/5521959532161"]}
   </script>
 
   <!-- JSON-LD FAQ -->
@@ -497,23 +497,34 @@
       </div>
       <div class="card p-6 fade-up">
         <h3 class="font-bold text-lg">Solicitar orçamento</h3>
-        <form id="formContato" action="https://formsubmit.co/fenixextintoresltda@gmail.com" method="POST" class="mt-4 grid gap-3">
-          <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_subject" value="Contato — site">
-          <input type="hidden" name="_next" value="https://www.seu-dominio.com/#sucesso">
+        <form id="formContato" class="mt-4 grid gap-3" novalidate>
+        <!-- Configurações FormSubmit -->
+        <input type="hidden" name="_subject" value="Contato — site">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_autoresponse"
+              value="Recebemos sua mensagem e retornaremos em breve. — FÊNIX EXTINTORES">
+        <!-- Honeypot anti-spam (NÃO remover) -->
+        <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off">
 
-          <div class="fld"><input name="nome" autocomplete="name" required placeholder=" "><label>Nome*</label></div>
-          <div class="fld"><input name="email" type="email" autocomplete="email" required placeholder=" "><label>E-mail*</label></div>
-          <div class="fld"><input name="telefone" id="tel2" autocomplete="tel" placeholder=" " inputmode="tel"><label>Telefone/WhatsApp</label></div>
-          <div class="fld"><input name="assunto" placeholder=" " autocomplete="off"><label>Assunto</label></div>
-          <div class="fld"><textarea name="mensagem" placeholder=" " autocomplete="off"></textarea><label>Mensagem</label></div>
+        <div class="fld"><input name="nome" autocomplete="name" required placeholder=" "><label>Nome*</label></div>
+        <div class="fld"><input name="email" type="email" autocomplete="email" required placeholder=" "><label>E-mail*</label></div>
+        <div class="fld"><input name="telefone" id="tel2" autocomplete="tel" placeholder=" " inputmode="tel"><label>Telefone/WhatsApp</label></div>
+        <div class="fld"><input name="assunto" placeholder=" " autocomplete="off"><label>Assunto</label></div>
+        <div class="fld"><textarea name="mensagem" placeholder=" " autocomplete="off"></textarea><label>Mensagem</label></div>
 
-          <button id="btnEnviar2" type="submit" class="btn btn-red">
-            <span id="btnTxt2">Enviar</span>
-            <svg id="btnLoad2" class="hidden animate-spin h-5 w-5 text-white" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path></svg>
-          </button>
-        </form>
+        <!-- Mensagem de retorno dentro do card -->
+        <div id="formMsg" class="hidden rounded-lg border px-3 py-3 text-sm" role="status" aria-live="polite"></div>
+
+        <button id="btnEnviar2" type="submit" class="btn btn-red">
+          <span id="btnTxt2">Enviar</span>
+          <svg id="btnLoad2" class="hidden animate-spin h-5 w-5 text-white" viewBox="0 0 24 24">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+          </svg>
+        </button>
+      </form>
+
       </div>
     </div>
   </section>
@@ -604,20 +615,74 @@
 
     // Máscara simples de telefone (form de contato)
     const maskPhone = v => v.replace(/\D/g,'').replace(/^(\d{2})(\d)/,'($1) $2').replace(/(\d{5})(\d{4})$/,'$1-$2').slice(0,16);
-    const tel2=document.getElementById('tel2'); if(tel2){ tel2.addEventListener('input',e=>e.target.value=maskPhone(e.target.value)); }
+const tel2=document.getElementById('tel2'); if(tel2){ tel2.addEventListener('input',e=>e.target.value=maskPhone(e.target.value)); }
 
-    // Botão Enviar (loading) + toast no retorno com #sucesso
-    function bindForm(formId,btnId,txtId,loadId){
-      const form=document.getElementById(formId);
-      const btn=document.getElementById(btnId);
-      const txt=document.getElementById(txtId);
-      const load=document.getElementById(loadId);
-      if(!form) return;
-      form.addEventListener('submit',()=>{ if(btn&&txt&&load){ txt.classList.add('hidden'); load.classList.remove('hidden'); } });
+// ===== Envio AJAX (sem redirecionar) =====
+const form  = document.getElementById('formContato');
+const btn   = document.getElementById('btnEnviar2');
+const txt   = document.getElementById('btnTxt2');
+const load  = document.getElementById('btnLoad2');
+const toast = document.getElementById('toast');
+const msgEl = document.getElementById('formMsg');
+
+function setLoading(on){
+  if(!btn) return;
+  btn.disabled = on;
+  if(txt)  txt.classList.toggle('hidden', on);
+  if(load) load.classList.toggle('hidden', !on);
+}
+
+function showMsg(type, text){
+  if(!msgEl) return;
+  msgEl.classList.remove('hidden');
+  msgEl.className = 'rounded-lg border px-3 py-3 text-sm ' + (type==='ok'
+    ? 'bg-emerald-50 text-emerald-800 border-emerald-200'
+    : 'bg-red-50 text-red-800 border-red-200');
+  msgEl.textContent = text;
+}
+
+form && form.addEventListener('submit', async (e)=>{
+  e.preventDefault();
+
+  // Validação simples
+  const required = form.querySelectorAll('[name="nome"],[name="email"]');
+  let invalid = false;
+  required.forEach(el=>{
+    const ok = el.value.trim();
+    el.classList.toggle('is-invalid', !ok);
+    if(!ok) invalid = true;
+  });
+  if(invalid){ showMsg('err','Preencha os campos obrigatórios.'); return; }
+
+  // Monta o payload -> JSON para endpoint AJAX do FormSubmit
+  const fd = new FormData(form);
+  const payload = Object.fromEntries(fd.entries());
+
+  setLoading(true);
+  try{
+    const res = await fetch('https://formsubmit.co/ajax/fenixextintoresltda@gmail.com', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json','Accept':'application/json'},
+      body: JSON.stringify(payload)
+    });
+
+    if(!res.ok){
+      const data = await res.json().catch(()=> ({}));
+      throw new Error(data?.message || 'Não foi possível enviar agora. Tente novamente.');
     }
-    bindForm('formContato','btnEnviar2','btnTxt2','btnLoad2');
 
-    if(location.hash==='#sucesso'){ const t=document.getElementById('toast'); t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),4000); }
+    // Sucesso: limpa e mostra confirmações
+    form.reset();
+    form.querySelectorAll('.fld').forEach(w=>w.classList.remove('filled'));
+    showMsg('ok','Mensagem enviada! Vamos falar com você em instantes.');
+    if(toast){ toast.classList.add('show'); setTimeout(()=>toast.classList.remove('show'), 4000); }
+
+  } catch(err){
+    showMsg('err', String(err.message || err));
+  } finally {
+    setLoading(false);
+  }
+});
 
     // Back to top
     const back=document.getElementById('backtop');
