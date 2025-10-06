@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contato | FÊNIX Extintores</title>
   <meta name="description" content="Fale com um especialista: orçamentos, dúvidas e suporte técnico em segurança contra incêndio." />
+  <link rel="canonical" href="https://www.extintoresfenix.com.br/contato.html" />
+
+  <!-- OG/Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contato | FÊNIX Extintores">
+  <meta property="og:description" content="Orçamentos, dúvidas e suporte técnico em segurança contra incêndio.">
+  <meta property="og:url" content="https://www.extintoresfenix.com.br/contato.html">
+  <meta property="og:image" content="https://www.extintoresfenix.com.br/assets/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -22,11 +32,11 @@
   {
     "@context":"https://schema.org",
     "@type":"ContactPage",
-    "name":"Contato — FENIX Extintores",
-    "url":"https://www.seu-dominio.com/contato.html",
+    "name":"Contato — FÊNIX Extintores",
+    "url":"https://www.extintoresfenix.com.br/contato.html",
     "about":{
       "@type":"LocalBusiness",
-      "name":"FENIX Extintores",
+      "name":"FÊNIX Extintores",
       "telephone":"+55 21 95953-2161",
       "address":{
         "@type":"PostalAddress",
@@ -70,6 +80,7 @@
                       invisible opacity-0 translate-y-1 transition-all duration-150
                       group-hover:visible group-hover:opacity-100 group-hover:translate-y-0
                       group-focus-within:visible group-focus-within:opacity-100 group-focus-within:translate-y-0">
+            <a href="/servico/recarga-extintores.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Recarga de Extintores</a>
             <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de AVCB e PPCI</a>
             <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviços de Brigada de Incêndio</a>
             <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-white/10">Serviço de Sinalização para Rota de Fuga</a>
@@ -116,6 +127,7 @@
             <svg class="h-4 w-4 transition-transform group-open:rotate-180" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 111.06 1.06l-4.24 4.25a.75.75 0 01-1.06 0L5.25 8.29a.75.75 0 01-.02-1.06z" clip-rule="evenodd"/></svg>
           </summary>
           <div class="mt-1 pl-3 space-y-1">
+            <a href="/servico/recarga-extintores.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Recarga de Extintores</a>
             <a href="/servico/avcb-ppci.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviços de AVCB e PPCI</a>
             <a href="/servico/brigada-de-incendio.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviços de Brigada de Incêndio</a>
             <a href="/servico/sinalizacao-rota-de-fuga.html" class="block px-3 py-2 rounded-lg hover:bg-slate-100">Serviço de Sinalização para Rota de Fuga</a>
@@ -170,6 +182,8 @@
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_subject" value="Novo contato — FÊNIX Extintores">
       <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem e retornaremos em breve. — FÊNIX EXTINTORES">
+      <!-- Fallback se JS estiver desabilitado -->
+      <input type="hidden" name="_next" value="https://www.extintoresfenix.com.br/contato.html#enviado">
       <!-- Honeypot -->
       <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0">
 
@@ -178,7 +192,7 @@
           <label class="block text-sm font-semibold mb-1" for="nome">Nome completo</label>
           <input id="nome" name="nome" type="text" required
                  class="w-full rounded-xl border border-slate-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-red-500"
-                 placeholder="Seu nome">
+                 placeholder="Seu nome" autocomplete="name">
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -217,7 +231,7 @@
         </div>
 
         <div class="flex items-center gap-3">
-          <input id="lgpd" name="lgpd" type="checkbox" class="w-4 h-4">
+          <input id="lgpd" name="lgpd" type="checkbox" class="w-4 h-4" required />
           <label for="lgpd" class="text-sm">Concordo com o tratamento dos dados informados, conforme a LGPD.</label>
         </div>
 
@@ -229,9 +243,12 @@
           <span id="btnTxt">Enviar</span>
           <svg id="btnLoad" class="hidden animate-spin h-5 w-5 ml-2" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"></path>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 0 1 8-8v4a4 4 0 0 0-4 4H4z"></path>
           </svg>
         </button>
+
+        <!-- Fallback (hash) -->
+        <p id="enviado" class="hidden text-emerald-600 text-sm font-medium">Mensagem enviada! Em breve entraremos em contato.</p>
       </div>
     </form>
 
@@ -322,6 +339,7 @@
       <div>
         <h5 class="text-white font-semibold">Links</h5>
         <ul class="mt-2 space-y-1">
+          <li><a href="/servico/recarga-extintores.html" class="hover:underline">Recarga de Extintores</a></li>
           <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
           <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
           <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>

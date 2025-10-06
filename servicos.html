@@ -4,14 +4,19 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Serviços | FÊNIX EXTINTORES</title>
-  <meta name="description" content="Conheça os serviços da FÊNIX EXTINTORES: projetos AVCB/PPCI, brigada de incêndio, sinalização de rota de fuga e teste hidrostático no RJ." />
+  <meta name="description" content="Conheça os serviços da FÊNIX EXTINTORES: recarga de extintores, projetos AVCB/PPCI, brigada de incêndio, sinalização de rota de fuga e teste hidrostático no RJ." />
   <meta name="keywords" content="extintores, recarga, manutenção, brigada de incêndio, AVCB, PPCI, RJ, Rio de Janeiro, teste hidrostático, sinalização">
+  <link rel="canonical" href="https://www.extintoresfenix.com.br/servicos.html" />
+
+  <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Serviços | FÊNIX EXTINTORES">
-  <meta property="og:description" content="AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático. Atendimento no RJ e Região.">
-  <meta property="og:image" content="https://www.seu-dominio.com/assets/og.jpg">
-  <link rel="icon" href="/static/favicon.ico" />
+  <meta property="og:description" content="Recarga, AVCB/PPCI, Brigada, Sinalização e Teste Hidrostático. Atendimento no RJ e Região.">
+  <meta property="og:image" content="https://www.extintoresfenix.com.br/assets/og.jpg">
+  <meta property="og:url" content="https://www.extintoresfenix.com.br/servicos.html">
+  <meta name="twitter:card" content="summary_large_image">
 
+  <link rel="icon" href="/static/favicon.ico" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,19 +36,30 @@
     .dropdown a:hover{background:#dc2626}
   </style>
 
-  <!-- JSON-LD: CollectionPage -->
+  <!-- JSON-LD: CollectionPage + ItemList -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"CollectionPage",
-    "name":"Serviços — FENIX EXTINTORES",
-    "url":"https://www.seu-dominio.com/servicos.html",
+    "name":"Serviços — FÊNIX EXTINTORES",
+    "url":"https://www.extintoresfenix.com.br/servicos.html",
     "about":[
+      {"@type":"Service","name":"Recarga de Extintores"},
       {"@type":"Service","name":"AVCB & PPCI"},
       {"@type":"Service","name":"Brigada de Incêndio"},
       {"@type":"Service","name":"Sinalização de Rota de Fuga"},
       {"@type":"Service","name":"Teste Hidrostático"}
-    ]
+    ],
+    "hasPart":{
+      "@type":"ItemList",
+      "itemListElement":[
+        {"@type":"ListItem","position":1,"item":{"@type":"Service","name":"Recarga de Extintores","url":"https://www.extintoresfenix.com.br/servico/recarga-extintores.html"}},
+        {"@type":"ListItem","position":2,"item":{"@type":"Service","name":"AVCB & PPCI","url":"https://www.extintoresfenix.com.br/servico/avcb-ppci.html"}},
+        {"@type":"ListItem","position":3,"item":{"@type":"Service","name":"Brigada de Incêndio","url":"https://www.extintoresfenix.com.br/servico/brigada-de-incendio.html"}},
+        {"@type":"ListItem","position":4,"item":{"@type":"Service","name":"Sinalização de Rota de Fuga","url":"https://www.extintoresfenix.com.br/servico/sinalizacao-rota-de-fuga.html"}},
+        {"@type":"ListItem","position":5,"item":{"@type":"Service","name":"Teste Hidrostático","url":"https://www.extintoresfenix.com.br/servico/teste-hidrostatico.html"}}
+      ]
+    }
   }
   </script>
 </head>
@@ -70,7 +86,7 @@
       </a>
 
       <!-- Navegação desktop -->
-      <nav class="hidden md:flex items-center gap-4 text-sm font-medium">
+      <nav class="hidden md:flex items-center gap-4 text-sm font-medium" aria-label="Primária">
         <a href="/" class="hover:text-red-600">HOME</a>
 
         <div class="nav-group">
@@ -80,6 +96,7 @@
           </button>
           <div class="nav-bridge"></div>
           <div class="dropdown">
+            <a href="/servico/recarga-extintores.html">Recarga de Extintores</a>
             <a href="/servico/avcb-ppci.html">Serviços de AVCB e PPCI</a>
             <a href="/servico/brigada-de-incendio.html">Serviços de Brigada de Incêndio</a>
             <a href="/servico/sinalizacao-rota-de-fuga.html">Serviço de Sinalização para Rota de Fuga</a>
@@ -116,10 +133,10 @@
   <!-- MENU MOBILE (drawer) -->
   <div id="mobile-menu" class="fixed inset-0 z-[60] hidden" aria-hidden="true">
     <div id="mobile-backdrop" class="absolute inset-0 bg-black/40 backdrop-blur-[1px]"></div>
-    <nav class="absolute right-0 top-0 h-full w-[86%] max-w-[360px] bg-white shadow-2xl p-5 overflow-y-auto">
+    <nav class="absolute right-0 top-0 h-full w-[86%] max-w-[360px] bg-white shadow-2xl p-5 overflow-y-auto" aria-label="Menu móvel">
       <div class="flex items-center justify-between mb-4">
         <div class="flex items-center gap-2">
-          <svg class="h-7 w-7"><use href="#logo-fenix"/></svg>
+          <svg class="h-7 w-7" aria-hidden="true"><use href="#logo-fenix"/></svg>
           <span class="font-extrabold">FÊNIX EXTINTORES</span>
         </div>
         <button id="nav-close" class="p-2 rounded-lg hover:bg-gray-100" aria-label="Fechar menu">
@@ -130,6 +147,7 @@
       <ul class="space-y-1 text-[15px] font-semibold">
         <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/">Home</a></li>
         <li class="pt-2 text-xs uppercase text-gray-400 px-3">Serviços</li>
+        <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/recarga-extintores.html">Recarga de Extintores</a></li>
         <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/avcb-ppci.html">AVCB & PPCI</a></li>
         <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/brigada-de-incendio.html">Brigada de Incêndio</a></li>
         <li><a class="block px-3 py-2 rounded-lg hover:bg-gray-100" href="/servico/sinalizacao-rota-de-fuga.html">Sinalização</a></li>
@@ -140,7 +158,7 @@
       </ul>
 
       <div class="mt-6">
-        <a href="https://wa.me/5521959532161" target="_blank"
+        <a href="https://wa.me/5521959532161" target="_blank" rel="noopener"
            class="w-full inline-flex items-center justify-center rounded-xl bg-emerald-600 text-white px-4 py-3 font-semibold hover:bg-emerald-700">
           WhatsApp
         </a>
@@ -154,8 +172,8 @@
       <nav class="text-sm text-slate-500 mb-3" aria-label="breadcrumb">
         <ol class="inline-flex items-center gap-2">
           <li><a class="hover:text-red-600" href="/">Início</a></li>
-          <li>/</li>
-          <li class="text-slate-700">Serviços</li>
+          <li aria-hidden="true">/</li>
+          <li class="text-slate-700" aria-current="page">Serviços</li>
         </ol>
       </nav>
       <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">Serviços</h1>
@@ -165,7 +183,11 @@
 
   <!-- LISTA DE SERVIÇOS -->
   <main class="mx-auto container-max px-4 py-12">
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+      <a href="/servico/recarga-extintores.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition">
+        <h3 class="font-semibold">Recarga de Extintores</h3>
+        <p class="text-slate-600 mt-2">Manutenção, selo INMETRO e coleta/entrega.</p>
+      </a>
       <a href="/servico/avcb-ppci.html" class="p-6 rounded-2xl bg-white border hover:shadow-lg transition">
         <h3 class="font-semibold">AVCB & PPCI</h3>
         <p class="text-slate-600 mt-2">Projetos, ART e regularização no CBMERJ.</p>
@@ -222,6 +244,7 @@
       <div>
         <h5 class="text-white font-semibold">Links</h5>
         <ul class="mt-2 space-y-1">
+          <li><a href="/servico/recarga-extintores.html" class="hover:underline">Recarga de Extintores</a></li>
           <li><a href="/servico/avcb-ppci.html" class="hover:underline">AVCB & PPCI</a></li>
           <li><a href="/servico/brigada-de-incendio.html" class="hover:underline">Brigada de Incêndio</a></li>
           <li><a href="/servico/sinalizacao-rota-de-fuga.html" class="hover:underline">Sinalização</a></li>
@@ -240,8 +263,8 @@
   <!-- WhatsApp flutuante -->
   <a href="https://wa.me/5521959532161?text=Ol%C3%A1!%20Quero%20um%20or%C3%A7amento%20de%20servi%C3%A7os."
      class="fixed bottom-6 right-6 rounded-full shadow-xl bg-emerald-600 p-3 md:p-4 hover:bg-emerald-700"
-     aria-label="WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7 text-white" viewBox="0 0 24 24" fill="currentColor">
+     aria-label="Abrir conversa no WhatsApp" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 md:h-7 md:w-7 text-white" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
       <path d="M20.52 3.48A11.89 11.89 0 0 0 12.06 0C5.52 0 .2 5.3.2 11.86c0 2.09.54 4.13 1.57 5.94L0 24l6.36-1.67a11.76 11.76 0 0 0 5.7 1.46h.01c6.54 0 11.86-5.31 11.86-11.86 0-3.17-1.24-6.15-3.41-8.45ZM12.06 21.3h-.01a9.45 9.45 0 0 1-4.82-1.32l-.35-.2-3.77 1 .99-3.68-.22-.37a9.38 9.38 0 0 1-1.43-4.97C2.46 6.67 6.67 2.46 12.06 2.46c2.45 0 4.76.95 6.49 2.66a9.1 9.1 0 0 1 2.67 6.48c0 5.4-4.4 9.7-9.16 9.7Zm5.03-7.23c-.27-.14-1.57-.77-1.81-.86-.24-.09-.42-.14-.6.14-.18.27-.69.86-.85 1.03-.16.18-.31.2-.58.07-.27-.13-1.15-.42-2.19-1.34-.81-.72-1.36-1.61-1.52-1.88-.16-.27-.02-.42.12-.56.12-.12.27-.31.4-.47.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.45-.83-1.98-.22-.53-.44-.46-.6-.47l-.51-.01c-.18 0-.47 .07-.72 .34-.24 .27-.95 .93-.95 2.25 0 1.32 .97 2.59 1.1 2.77 .14 .18 1.9 2.9 4.6 4.05 .64 .28 1.14 .45 1.53 .57 .64 .2 1.22 .17 1.68 .1 .51-.08 1.57-.64 1.79-1.27 .22-.63 .22-1.16 .15-1.27 -.06-.11 -.23 -.18 -.5 -.32Z"/>
     </svg>
   </a>
